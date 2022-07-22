@@ -23,6 +23,8 @@ Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 
 - typescript 支持
 - css预处理 less、sass、stylus
 - 多页面应用模式
+- plop 支持
+- 定义常用脚本命令
 
 ## 使用
 
@@ -87,6 +89,7 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 - [gitignore](https://git-scm.com/docs/gitignore)
 - [webpack](https://webpack.docschina.org/guides/getting-started/)
 - [prettier](https://prettier.io/docs/en/index.html)
+- [ruoyi](https://github.dev/YunaiV/ruoyi-vue-pro/)
 
 ## Contribution
 
