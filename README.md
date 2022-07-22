@@ -74,7 +74,7 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 ## 参考
 
-- [Configuration Reference](https://cli.vuejs.org/zh/config/).
+- [vite](https://cn.vitejs.dev/guide/features.htm)
 - [Babel Config](https://babel.docschina.org/docs/en/7.0.0/configuration/)
 - [EsLint](https://eslint.org/docs/user-guide/configuring/)
 - [eslintignore-file](https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file)
