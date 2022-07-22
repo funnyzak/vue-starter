@@ -1,8 +1,24 @@
 {
   "name": "vue-vite-starter",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funnyzak/vue-vite-starter.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "vite",
+    "typescript"
+  ],
+  "author": "funnyzak <silenceace@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funnyzak/vue-vite-starter/issues"
+  },
+  "homepage": "https://github.com/funnyzak/vue-vite-starter#readme",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
