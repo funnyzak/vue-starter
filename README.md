@@ -21,6 +21,7 @@ Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 
 ## 特性
 
 - typescript 支持
+- css预处理 less、sass、stylus
 
 ## 使用
 
