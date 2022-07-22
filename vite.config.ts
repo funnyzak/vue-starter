@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+
 import legacy from '@vitejs/plugin-legacy'
 
 import { defineConfig, loadEnv } from "vite";
@@ -17,10 +19,18 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     root: "./",
     // 开发或生产环境服务的公共基础路径。
     base: "./",
+    // 作为静态资源服务的文件夹。该目录中的文件在开发期间在 / 处提供，并在构建期间复制到 outDir 的根目录，并且始终按原样提供或复制而无需进行转换。该值可以是文件系统的绝对路径，也可以是相对于项目的根目录的相对路径。
+    publicDir: "public",
     resolve: {
-      alias: {
-        "@": "./",
-      },
+      alias: [{
+          find: '@',
+          replacement: resolve(__dirname, 'src')
+        },
+        {
+          find: 'components',
+          replacement: resolve(__dirname, 'src/components')
+        }
+      ],
       // 导入时想要省略的扩展名列表。注意，不 建议忽略自定义导入类型的扩展名（例如：.vue），因为它会影响 IDE 和类型支持。
       extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
     },
@@ -33,10 +43,17 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       assetsInlineLimit: 4096,
       // 启用/禁用 CSS 代码拆分。当启用时，在异步 chunk 中导入的 CSS 将内联到异步 chunk 本身，并在其被加载时插入。
       cssCodeSplit: true,
+      // 多页面应用模式
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, 'index.html'),
+          nested: resolve(__dirname, 'nested.html')
+        }
+      }
     },
     // vite 配置(环境变量)
     define: {
-      __APP_ENV__: env.APP_ENV
+      // __APP_ENV__: env.APP_ENV
     },
     server: {
       host: "0.0.0.0",
