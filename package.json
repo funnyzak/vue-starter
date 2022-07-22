@@ -20,9 +20,14 @@
   },
   "homepage": "https://github.com/funnyzak/vue-vite-starter#readme",
   "scripts": {
+    "i": "pnpm install",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve:test": "vite preview --mode test",
+    "npm:check": "npx npm-check-updates",
+    "clean": "npx rimraf node_modules",
+    "clean:cache": "npx rimraf node_modules/.cache"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -30,13 +35,14 @@
   "devDependencies": {
     "@types/node": "^18.0.6",
     "@vitejs/plugin-legacy": "^2.0.0",
-    "@vitejs/plugin-vue": "^3.0.0",
+    "@vitejs/plugin-vue": "^3.0.1",
     "less": "^4.1.3",
     "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.53.0",
     "stylus": "^0.58.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.0",
-    "vue-tsc": "^0.38.4"
+    "typescript": "^4.7.4",
+    "vite": "^3.0.2",
+    "vue-tsc": "^0.38.9"
   }
 }
