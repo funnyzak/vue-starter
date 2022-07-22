@@ -10,7 +10,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      DIST_ARCHIVE_NAME: vue_starter_dist
+      DIST_ARCHIVE_NAME: vue_vite_starter_dist
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
