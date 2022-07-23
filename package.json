@@ -1,12 +1,12 @@
 {
-  "name": "vue-vite-starter",
+  "name": "vite-vue-starter",
   "private": false,
   "version": "0.0.2",
   "description": "基于vue3、typesScript、vite3 开发脚手架",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/funnyzak/vue-vite-starter.git"
+    "url": "git+https://github.com/funnyzak/vite-vue-starter.git"
   },
   "keywords": [
     "vue",
@@ -48,7 +48,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/funnyzak/vue-vite-starter/issues"
+    "url": "https://github.com/funnyzak/vite-vue-starter/issues"
   },
-  "homepage": "https://github.com/funnyzak/vue-vite-starter#readme"
+  "homepage": "https://github.com/funnyzak/vite-vue-starter#readme"
 }

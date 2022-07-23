@@ -1,4 +1,4 @@
-# Vue Vite Starter
+# Vite Vue Starter
 
 [![action][ci-image]][ci-url]
 [![GitHub repo size][repo-size-image]][repository-url]
@@ -6,17 +6,17 @@
 [![GitHub last commit][last-commit-image]][repository-url]
 [![license][license-image]][repository-url]
 
-[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vue-vite-starter/Release
-[ci-url]: https://github.com/funnyzak/vue-vite-starter/actions
-[license-image]: https://img.shields.io/github/license/funnyzak/vue-vite-starter.svg?style=flat-square
-[repository-url]: https://github.com/funnyzak/vue-vite-starter
-[repo-size-image]: https://img.shields.io/github/repo-size/funnyzak/vue-vite-starter
-[commit-activity-image]: https://img.shields.io/github/commit-activity/m/funnyzak/vue-vite-starter?style=flat-square
-[last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vue-vite-starter?style=flat-square
-[rle-image]: https://img.shields.io/github/release-date/funnyzak/vue-vite-starter.svg
-[rle-url]: https://github.com/funnyzak/vue-vite-starter/releases/latest
+[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vite-vue-starter/Release
+[ci-url]: https://github.com/funnyzak/vite-vue-starter/actions
+[license-image]: https://img.shields.io/github/license/funnyzak/vite-vue-starter.svg?style=flat-square
+[repository-url]: https://github.com/funnyzak/vite-vue-starter
+[repo-size-image]: https://img.shields.io/github/repo-size/funnyzak/vite-vue-starter
+[commit-activity-image]: https://img.shields.io/github/commit-activity/m/funnyzak/vite-vue-starter?style=flat-square
+[last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vite-vue-starter?style=flat-square
+[rle-image]: https://img.shields.io/github/release-date/funnyzak/vite-vue-starter.svg
+[rle-url]: https://github.com/funnyzak/vite-vue-starter/releases/latest
 
-Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 Vue 项目开发。[预览](https://funnyzak.github.io/vue-vite-starter/)。
+Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 Vue 项目开发。[预览](https://funnyzak.github.io/vite-vue-starter/)。
 
 ## 特性
 
@@ -95,8 +95,8 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 如果你有任何的想法或者意见，欢迎提 Issue 或者 PR。
 
-<a href="https://github.com/funnyzak/vue-vite-starter/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=funnyzak/vue-vite-starter" />
+<a href="https://github.com/funnyzak/vite-vue-starter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=funnyzak/vite-vue-starter" />
 </a>
 
 ## License
