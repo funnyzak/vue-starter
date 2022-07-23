@@ -57,6 +57,16 @@
     "vite-plugin-eslint": "^1.7.0",
     "vue-tsc": "^0.38.9"
   },
+  "lint-staged": {
+    "*.{js,cjs,jsx,vue,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix --cache",
+      "vue-cli-service lint"
+    ],
+    "*.{md,html,json,css,less,scss,sass}": [
+      "prettier --write"
+    ]
+  },
   "engines": {
     "node": ">= 14.18.0"
   },
