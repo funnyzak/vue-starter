@@ -5,7 +5,9 @@ module.exports = {
   // 结尾分号
   semi: true,
   vueIndentScriptAndStyle: false,
+
   singleQuote: true,
+
   // Change when properties in objects are quoted.
   quoteProps: 'consistent',
   bracketSpacing: true,
@@ -15,7 +17,8 @@ module.exports = {
   insertPragma: false,
   requirePragma: false,
   proseWrap: 'never',
+  singleQuote: true,
   htmlWhitespaceSensitivity: 'strict',
   endOfLine: 'auto',
   rangeStart: 0
-}
+};
