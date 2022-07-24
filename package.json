@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "vue": "^3.2.37",
-    "vue-i18n": "^9.1.10"
+    "vue-i18n": "^9.1.10",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^5.0.1",
