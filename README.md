@@ -18,6 +18,15 @@
 
 Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 Vue 项目开发。[预览](https://funnyzak.github.io/vite-vue-starter/)。
 
+## TODO
+
+- [ ] 多语言国际化
+- [ ] Store
+- [ ] 自定义全局指令
+- [ ] 通用API入口
+- [ ] 常用HOOK
+- [ ] 通用工具类
+
 ## 特性
 
 - typescript 支持
@@ -26,6 +35,8 @@ Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 
 - plop 支持
 - 定义常用脚本命令
 - eslint support
+- lint staged files
+
 
 ## 使用
 
