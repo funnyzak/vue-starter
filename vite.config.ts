@@ -2,8 +2,18 @@ import { resolve } from 'path';
 
 import legacy from '@vitejs/plugin-legacy';
 import EslintPlugin from 'vite-plugin-eslint';
+import VueI18n from '@intlify/vite-plugin-vue-i18n';
+
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
+
+// 当前执行node命令时文件夹的地址（工作目录）
+const root = process.cwd();
+
+// 路径查找
+function pathResolve(dir: string) {
+  return resolve(root, '.', dir);
+}
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode, ssrBuild }) => {
@@ -99,6 +109,11 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     },
     plugins: [
       vue(),
+      VueI18n({
+        runtimeOnly: true,
+        compositionOnly: true,
+        include: [resolve(__dirname, 'src/locales/i18n/**')]
+      }),
       legacy({
         polyfills: true,
         targets: ['defaults', 'not IE 11']

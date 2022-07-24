@@ -31,9 +31,11 @@
     "p": "plop"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-i18n": "^9.1.10"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^5.0.1",
     "@types/node": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
