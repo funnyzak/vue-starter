@@ -23,6 +23,9 @@
       "./node_modules/@types/",
       "./types"
     ],
+    "types": [
+      "pinia-plugin-persist"
+    ],
     "skipLibCheck": true /* Skip type checking of declaration files. */
   },
   "include": [
