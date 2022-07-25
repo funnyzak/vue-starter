@@ -19,13 +19,22 @@
         "src/*"
       ]
     },
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types"
+    ],
     "skipLibCheck": true /* Skip type checking of declaration files. */
   },
   "include": [
+    "types/**/*.d.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
   ],
   "references": [
     {
