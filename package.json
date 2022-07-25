@@ -31,9 +31,11 @@
     "p": "plop"
   },
   "dependencies": {
+    "pinia": "^2.0.16",
+    "pinia-plugin-persist": "^1.0.0",
     "vue": "^3.2.37",
     "vue-i18n": "^9.1.10",
-    "vuex": "^4.0.2"
+    "web-storage-cache": "^1.1.1"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^5.0.1",
