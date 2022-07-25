@@ -21,11 +21,9 @@ Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 
 ## TODO
 
 - [ ] 多语言国际化
-- [ ] Store
 - [ ] 自定义全局指令
 - [ ] 通用API入口
 - [ ] 常用HOOK
-- [ ] 通用工具类
 
 ## 特性
 
@@ -36,7 +34,8 @@ Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 
 - 定义常用脚本命令
 - eslint support
 - lint staged files
-
+- 使用 Pinia 来管理状态
+- src/utils 通用工具函数
 
 ## 使用
 
