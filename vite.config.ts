@@ -1,18 +1,19 @@
 import { resolve } from 'path';
 
-import legacy from '@vitejs/plugin-legacy';
 import EslintPlugin from 'vite-plugin-eslint';
-import VueI18n from '@intlify/vite-plugin-vue-i18n';
+
+import legacy from '@vitejs/plugin-legacy';
+import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
 
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
 // 当前执行node命令时文件夹的地址（工作目录）
-const root = process.cwd();
+const rootPath = process.cwd();
 
 // 路径查找
 function pathResolve(dir: string) {
-  return resolve(root, '.', dir);
+  return resolve(rootPath, '.', dir);
 }
 
 // https://vitejs.dev/config/
@@ -32,18 +33,18 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     // 作为静态资源服务的文件夹。该目录中的文件在开发期间在 / 处提供，并在构建期间复制到 outDir 的根目录，并且始终按原样提供或复制而无需进行转换。该值可以是文件系统的绝对路径，也可以是相对于项目的根目录的相对路径。
     publicDir: 'public',
     resolve: {
+      // 导入时想要省略的扩展名列表。注意，不 建议忽略自定义导入类型的扩展名（例如：.vue），因为它会影响 IDE 和类型支持。
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css'],
       alias: [
         {
-          find: '@',
-          replacement: resolve(__dirname, 'src')
+          find: /\@\//,
+          replacement: `${pathResolve('src')}/`
         },
         {
           find: 'components',
-          replacement: resolve(__dirname, 'src/components')
+          replacement: pathResolve('src/components')
         }
-      ],
-      // 导入时想要省略的扩展名列表。注意，不 建议忽略自定义导入类型的扩展名（例如：.vue），因为它会影响 IDE 和类型支持。
-      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+      ]
     },
     build: {
       target: 'es2015',
@@ -57,8 +58,8 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       // 多页面应用模式
       rollupOptions: {
         input: {
-          main: resolve(__dirname, 'index.html'),
-          nested: resolve(__dirname, 'nested.html')
+          main: pathResolve('index.html'),
+          nested: pathResolve('nested.html')
         }
       }
     },
@@ -109,14 +110,14 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     },
     plugins: [
       vue(),
-      VueI18n({
-        runtimeOnly: true,
-        compositionOnly: true,
-        include: [resolve(__dirname, 'src/locales/i18n/**')]
-      }),
       legacy({
         polyfills: true,
         targets: ['defaults', 'not IE 11']
+      }),
+      vueI18n({
+        runtimeOnly: true,
+        compositionOnly: true,
+        include: [pathResolve('src/locales/i18n/**')]
       }),
       EslintPlugin({
         cache: false,
@@ -127,7 +128,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 
   if (command === 'serve') {
     // dev 独有配置
-    viteConfig.server.open = true;
+    viteConfig.server.open = false;
   } else {
     // command === 'build'
     // build 独有配置
