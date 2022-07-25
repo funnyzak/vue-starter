@@ -32,6 +32,13 @@ module.exports = defineConfig({
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     'vue/custom-event-name-casing': 'off',
+    'vue/first-attribute-linebreak': [
+      'error',
+      {
+        singleline: 'ignore',
+        multiline: 'below'
+      }
+    ],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
