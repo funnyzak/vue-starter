@@ -81,13 +81,14 @@ export function formatTime(time: Date | number | string, fmt: string) {
       S: date.getMilliseconds()
     }
     if (/(y+)/.test(fmt)) {
-      fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
+      fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substring(4 - RegExp.$1.length))
     }
     for (const k in o) {
       if (new RegExp('(' + k + ')').test(fmt)) {
+        const _v = o[k as keyof typeof o].toString()
         fmt = fmt.replace(
           RegExp.$1,
-          RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length)
+          RegExp.$1.length === 1 ? _v : ('00' + _v).substring(('' + _v).length)
         )
       }
     }
