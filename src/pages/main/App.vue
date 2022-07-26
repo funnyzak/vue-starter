@@ -1,18 +1,40 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useLocaleStoreWithOut } from '@/store/modules/locale';
+import { useAppStore } from '@/store/modules/app';
+import { useI18n } from '@/hooks/web/useI18n';
+import { useLocale } from '@/hooks/web/useLocale';
 
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from 'components/HelloWorld.vue';
-import { useAppStore } from '@/store/modules/app';
 
 const appStore = useAppStore();
+const localeStore = useLocaleStoreWithOut();
+const { t } = useI18n();
+const { changeLocale } = useLocale();
 
 const appName = computed(() => appStore.getAppName);
 </script>
 
 <template>
   <div>
+    <dl>
+      <dt style="display: inline">{{ t('common.locale') }}</dt>
+      <dd
+        v-for="(localMap, idx) in localeStore.getLocaleMaps"
+        :key="idx"
+        :style="{
+          cursor: 'pointer',
+          display: 'inline',
+          color: localeStore.getCurrentLocale.lang === localMap.lang ? 'blue' : 'black'
+        }"
+        @click="changeLocale(localMap.lang)"
+      >
+        {{ localMap.name }}
+      </dd>
+    </dl>
+
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
