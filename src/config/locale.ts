@@ -3,14 +3,14 @@ const { wsCache } = useCache();
 
 export interface LocaleState {
   currentLocale: {
-    lang: string;
+    lang: LocaleType;
   };
   localeMaps: LocaleMap[]
 }
 
 export interface LocaleMap {
-  lang: string;
-  name: string;
+  lang: LocaleType;
+  name?: string;
 }
 
 export const localeModules: LocaleState = {

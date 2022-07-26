@@ -13,11 +13,13 @@ export const useLocaleStore = defineStore({
     enabled: true
   },
   getters: {
-    getCurrentLocale(): string {
-      return this.currentLocale.lang;
+    getLocaleMaps(): LocaleMap[] {
+      return this.localeMaps;
     },
-    getLocaleMap(): LocaleMap {
-      return this.localeMaps.find((item) => item.lang === this.currentLocale.lang) || this.localeMaps[0];
+    getCurrentLocale(): LocaleMap {
+      return (
+        this.localeMaps.find((item) => item.lang === this.currentLocale.lang) || this.localeMaps[0]
+      );
     }
   },
   actions: {
