@@ -1,8 +1,9 @@
 export default {
   brand: {
-    name: 'Vite Vue Starter',
+    name: 'Vite Vue Starter'
   },
   common: {
+    locale: 'Locale',
     refresh: 'Refresh',
     more: 'More',
     home: 'Home',
@@ -77,6 +78,5 @@ export default {
   symbol: {
     comma: ',',
     period: '.'
-  },
-
+  }
 };
