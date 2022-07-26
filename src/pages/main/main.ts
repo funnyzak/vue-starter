@@ -21,7 +21,7 @@ const setupAll = async () => {
   await setupI18n(app);
 
   setupAuth(app);
-  
+
   setupStore(app);
 
   app.mount('#app');

@@ -1,10 +1,6 @@
 # Vite Vue Starter
 
-[![action][ci-image]][ci-url]
-[![GitHub repo size][repo-size-image]][repository-url]
-[![Release Date][rle-image]][rle-url]
-[![GitHub last commit][last-commit-image]][repository-url]
-[![license][license-image]][repository-url]
+[![action][ci-image]][ci-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![license][license-image]][repository-url]
 
 [ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vite-vue-starter/Release
 [ci-url]: https://github.com/funnyzak/vite-vue-starter/actions
@@ -20,21 +16,21 @@ Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 
 
 ## TODO
 
-- [ ] 自定义全局指令
-- [ ] 通用API入口
-- [ ] 优化文档
+- [ ] 通用 API 入口
+
 ## 特性
 
-- typescript 支持
-- css预处理 less、sass、stylus
+- Typescript 支持
+- CSS 预处理 less、sass、stylus
 - Locale 国际化
 - 多页面应用模式
-- plop 支持
+- Plop 支持
 - 定义常用脚本命令
-- eslint support
-- lint staged files
+- Eslint Support
+- Lint Staged Hook
 - 使用 Pinia 来管理状态
-- src/utils 通用工具函数
+- 自定义权限指令
+- Utils 通用工具函数
 
 ## 使用
 

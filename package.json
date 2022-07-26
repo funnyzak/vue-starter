@@ -28,7 +28,8 @@
     "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "lint:lint-staged": "lint-staged -c ",
     "lint:pretty": "pretty-quick --staged",
-    "p": "plop"
+    "p": "plop",
+    "prepare": "husky install"
   },
   "dependencies": {
     "jsencrypt": "^3.2.1",
@@ -51,6 +52,7 @@
     "eslint-define-config": "^1.5.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.1",
     "less": "^4.1.3",
     "lint-staged": "^13.0.3",
     "plop": "^3.1.1",
@@ -66,8 +68,7 @@
   "lint-staged": {
     "*.{js,cjs,jsx,vue,ts,tsx}": [
       "prettier --write",
-      "eslint --fix --cache",
-      "vue-cli-service lint"
+      "eslint --fix --cache"
     ],
     "*.{md,html,json,css,less,scss,sass}": [
       "prettier --write"
