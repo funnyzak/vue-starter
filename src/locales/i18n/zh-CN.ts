@@ -1,8 +1,9 @@
 export default {
   brand: {
-    name: 'Vite Vue 脚手架',
+    name: 'Vite Vue 脚手架'
   },
   common: {
+    locale: '地区',
     refresh: '刷新',
     more: '更多',
     home: '主页',
