@@ -10,7 +10,7 @@ const createI18nOptions = async (): Promise<I18nOptions> => {
   const localeStore = useLocaleStoreWithOut();
   const locale = localeStore.getCurrentLocale;
   const localeMaps = localeStore.getLocaleMaps;
-  const defaultLocal = await import(`../../locales/i18n/${locale.lang}.ts`);
+  const defaultLocal = await import(`../../locales/${locale.lang}.ts`);
   const message = defaultLocal.default ?? {};
 
   setHtmlPageLang(locale.lang);

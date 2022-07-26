@@ -117,7 +117,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       vueI18n({
         runtimeOnly: false,
         compositionOnly: true,
-        include: [pathResolve('src/locales/i18n/**')]
+        include: [pathResolve('src/locales/**')]
       }),
       EslintPlugin({
         cache: false,
