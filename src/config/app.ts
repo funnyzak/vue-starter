@@ -1,5 +1,5 @@
-import { useCache } from '@/hooks/web/useCache';
-const { wsCache } = useCache();
+import { useCache } from '@/hooks/web/useCache'
+const { wsCache } = useCache()
 
 export interface AppState {
   appName: string;
