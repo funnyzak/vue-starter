@@ -14,7 +14,7 @@
 [sg-url]: https://sourcegraph.com/github.com/funnyzak/vite-vue-starter
 [sg-image]: https://img.shields.io/badge/view%20on-Sourcegraph-brightgreen.svg?style=flat-square
 
-Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 Vue 项目开发。[预览](https://funnyzak.github.io/vite-vue-starter/)。
+Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[预览](https://funnyzak.github.io/vite-vue-starter/)。
 
 ## TODO
 
