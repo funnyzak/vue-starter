@@ -64,6 +64,9 @@ npm run clean
 # 代码格式化
 npm run lint:format
 
+# lint staged
+npm run lint:staged
+
 # 模板新建
 npm run p
 

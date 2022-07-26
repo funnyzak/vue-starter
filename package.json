@@ -27,7 +27,7 @@
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
     "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "lint:lint-staged": "lint-staged -c ",
-    "lint:pretty": "pretty-quick --staged",
+    "lint:staged": "lint-staged",
     "p": "plop",
     "prepare": "husky install"
   },
