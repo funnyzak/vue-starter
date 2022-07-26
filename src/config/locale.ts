@@ -5,7 +5,7 @@ export interface LocaleState {
   currentLocale: {
     lang: LocaleType;
   };
-  localeMaps: LocaleMap[]
+  localeMaps: LocaleMap[];
 }
 
 export interface LocaleMap {
