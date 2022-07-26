@@ -1,6 +1,6 @@
 # Vite Vue Starter
 
-[![action][ci-image]][ci-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![license][license-image]][repository-url]
+[![action][ci-image]][ci-url] [![Sourcegraph][sg-image]][sg-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![license][license-image]][repository-url]
 
 [ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vite-vue-starter/Release
 [ci-url]: https://github.com/funnyzak/vite-vue-starter/actions
@@ -11,6 +11,8 @@
 [last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vite-vue-starter?style=flat-square
 [rle-image]: https://img.shields.io/github/release-date/funnyzak/vite-vue-starter.svg
 [rle-url]: https://github.com/funnyzak/vite-vue-starter/releases/latest
+[sg-url]: https://sourcegraph.com/github.com/funnyzak/vite-vue-starter
+[sg-image]: https://img.shields.io/badge/view%20on-Sourcegraph-brightgreen.svg?style=flat-square
 
 Vue **3.0.0** 脚手架项目，构建基于 Vue-Cli。用于快速开始一个 Vue 项目开发。[预览](https://funnyzak.github.io/vite-vue-starter/)。
 
