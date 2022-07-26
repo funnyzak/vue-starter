@@ -115,7 +115,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         targets: ['defaults', 'not IE 11']
       }),
       vueI18n({
-        runtimeOnly: true,
+        runtimeOnly: false,
         compositionOnly: true,
         include: [pathResolve('src/locales/i18n/**')]
       }),
