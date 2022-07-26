@@ -10,37 +10,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "baseUrl": ".",
     "allowJs": true,
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types/",
-      "./types"
-    ],
-    "types": [
-      "pinia-plugin-persist"
-    ],
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    "types": ["pinia-plugin-persist", "unplugin-vue-define-options"],
     "skipLibCheck": true /* Skip type checking of declaration files. */
   },
-  "include": [
-    "types/**/*.d.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ],
+  "include": ["types/**/*.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["dist", "node_modules"],
   "references": [
     {
       "path": "./tsconfig.node.json"
