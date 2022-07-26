@@ -46,24 +46,70 @@ npm ci
 # 默认启动（所有）
 npm run dev
 
+# 预览
+npm run preview
+
 # 全部构建（所有）
 npm run build
 
 # Lint 格式化/检查
-npm run eslint
+npm run lint:eslint
 
 # 运行 jest 测试
 npm run test:unit
+
+# 删除node_modules
+npm run clean
+
+# 代码格式化
+npm run lint:format
+
+# 模板新建
+npm run p
+
 ```
 
 ## 目录
 
-    ├── dist                            // 构建输出
-    ├── public                          // 静态资源
-    ├── src                             // 前端源码
-    ├── tests                           // 测试
-    ├── tsconfig.json                   // typescript 配置
-    └── vite.config.js                  // vite配置
+    ├── .editorconfig                            // 编辑器配置文件
+    ├── .env.development                         // 环境配置文件（开发环境）
+    ├── .env.production                          // 环境配置文件（生产环境）
+    ├── .eslintignore                            // eslint 忽略文件
+    ├── .eslintrc.cjs                            // eslint 配置文件
+    ├── .github                                  // github 配置文件
+    ├── .gitignore                               // git 忽略文件
+    ├── .husky                                   // husky 配置文件
+    ├── .npmrc                                   // npm 配置文件
+    ├── .vscode                                  // vscode 配置文件
+    ├── LICENSE                                  // 许可证文件
+    ├── README.md                                // 项目介绍文件
+    ├── dist                                     // 打包输出目录
+    ├── index.html                               // 项目入口文件
+    ├── nested.html                              // 嵌套页面入口文件
+    ├── package-lock.json                        // 包依赖配置文件
+    ├── package.json                             // 包配置文件
+    ├── plop                                     // plop 配置
+    ├── plopfile.cjs                             // plop 配置文件
+    ├── postcss.config.js                        // postcss 配置文件
+    ├── prettier.config.cjs                      // prettier 配置文件
+    ├── public                                   // 项目公共目录
+    ├── src                                      // 项目源码目录
+    │  ├── assets                                // 静态资源目录
+    │  ├── components                            // 组件目录
+    │  ├── config                                // 配置目录
+    │  ├── directives                            // 指令目录
+    │  ├── hooks                                 // 钩子目录
+    │  ├── locales                               // 国际化目录
+    │  ├── pages                                 // 页面目录
+    │  ├── plugins                               // 插件目录
+    │  ├── store                                 // 状态管理
+    │  ├── styles                                // 样式目录
+    │  ├── utils                                 // 工具函数目录
+    │  └── vite-env.d.ts                         // vite 环境配置文件
+    ├── tsconfig.json                            // TypeScript 配置文件
+    ├── tsconfig.node.json
+    ├── types                                    // 类型文件目录
+    └── vite.config.ts                           // vite 配置文件
 
 ## template
 
