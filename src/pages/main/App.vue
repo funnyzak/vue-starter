@@ -2,8 +2,7 @@
 import { computed } from 'vue';
 import { useLocaleStoreWithOut } from '@/store/modules/locale';
 import { useAppStore } from '@/store/modules/app';
-import { useI18n } from '@/hooks/web/useI18n';
-import { useLocale } from '@/hooks/web/useLocale';
+import { useLocale, useI18n } from '@/hooks';
 import { useMouse, useCounter } from '@vueuse/core';
 
 // This starter template is using Vue 3 <script setup> SFCs
