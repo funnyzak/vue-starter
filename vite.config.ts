@@ -5,6 +5,8 @@ import EslintPlugin from 'vite-plugin-eslint';
 import legacy from '@vitejs/plugin-legacy';
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
 import DefineOptions from 'unplugin-vue-define-options/vite';
+import WindiCSS from 'vite-plugin-windicss';
+import VueJsx from '@vitejs/plugin-vue-jsx';
 
 import { loadEnv } from 'vite';
 import type { UserConfig, ConfigEnv } from 'vite';
@@ -124,6 +126,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
     plugins: [
       vue(),
+      WindiCSS(),
+      VueJsx(),
       DefineOptions(),
       legacy({
         polyfills: true,
