@@ -69,6 +69,10 @@ npm run lint:staged
 # 模板新建
 npm run p
 
+# 更多请看 package.json
+npm run serve:dev
+npm run serve:prod
+npm run serve:test
 ```
 
 ## 目录
