@@ -16,10 +16,6 @@
 
 Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[预览](https://funnyzak.github.io/vite-vue-starter/)。
 
-## TODO
-
-- [ ] 通用 API 入口
-
 ## 特性
 
 - Typescript 支持
@@ -32,6 +28,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - Lint Staged Hook
 - 使用 Pinia 来管理状态
 - 自定义权限指令
+- 使用 Axios 进行 Http API 请求
 - Utils 通用工具函数
 
 ## 使用
