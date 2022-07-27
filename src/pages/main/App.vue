@@ -4,10 +4,14 @@ import { useLocaleStoreWithOut } from '@/store/modules/locale';
 import { useAppStore } from '@/store/modules/app';
 import { useI18n } from '@/hooks/web/useI18n';
 import { useLocale } from '@/hooks/web/useLocale';
+import { useMouse, useCounter } from '@vueuse/core';
 
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from 'components/HelloWorld.vue';
+
+const { x, y } = useMouse();
+const { count, inc, dec } = useCounter();
 
 const appStore = useAppStore();
 const localeStore = useLocaleStoreWithOut();
@@ -41,6 +45,12 @@ const appName = computed(() => appStore.getAppName);
     <a href="https://vuejs.org/" target="_blank">
       <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <div>Mouse: {{ x }} x {{ y }}</div>
+    <div>
+      Counter: {{ count }}
+      <a @click="inc()" style="margin-right: 10px">+</a>
+      <a @click="dec()">-</a>
+    </div>
   </div>
   <HelloWorld :msg="appName" />
 </template>
