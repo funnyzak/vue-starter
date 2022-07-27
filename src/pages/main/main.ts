@@ -5,6 +5,9 @@ import '@/plugins/windi.css';
 import '@/styles/index.less';
 import './style.css';
 
+// 引入动画
+import '@/plugins/animate.css';
+
 import App from './App.vue';
 
 // 引入状态管理
