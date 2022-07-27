@@ -97,6 +97,7 @@ npm run p
     ├── public                                   // 项目公共目录
     ├── src                                      // 项目源码目录
     │  ├── assets                                // 静态资源目录
+    │  |── api                                   // api 接口目录
     │  ├── components                            // 组件目录
     │  ├── config                                // 配置目录
     │  ├── directives                            // 指令目录
