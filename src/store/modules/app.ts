@@ -17,6 +17,9 @@ export const useAppStore = defineStore({
     },
     getIsDark(): boolean {
       return this.isDark;
+    },
+    getPageLoading(): boolean {
+      return this.pageLoading;
     }
   },
   actions: {
@@ -26,6 +29,9 @@ export const useAppStore = defineStore({
     setLocale(isDark: boolean) {
       this.isDark = isDark;
       wsCache.set('isDark', this.isDark);
+    },
+    setPageLoading(pageLoading: boolean) {
+      this.pageLoading = pageLoading;
     }
   }
 });
