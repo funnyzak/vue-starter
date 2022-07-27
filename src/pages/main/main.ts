@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 
 // 引入全局样式
+import '@/styles/index.less';
 import './style.css';
 
 import App from './App.vue';
