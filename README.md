@@ -16,6 +16,11 @@
 
 Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[预览](https://vuestarter.yycc.dev/)。
 
+## TODO
+
+- [ ] Router 创建
+- [ ] 母版布局
+
 ## 特性
 
 - Typescript 支持
@@ -30,6 +35,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - 自定义权限指令
 - 使用 Axios 进行 Http API 请求
 - 支持 JSX 语法
+- 引入 Animite.css
 - Utils 通用工具函数
 
 ## 使用
