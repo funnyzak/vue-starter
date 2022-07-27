@@ -1,17 +1,17 @@
-# Vite Vue Starter
+# Vue Starter
 
 [![action][ci-image]][ci-url] [![Sourcegraph][sg-image]][sg-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![license][license-image]][repository-url]
 
-[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vite-vue-starter/Release
-[ci-url]: https://github.com/funnyzak/vite-vue-starter/actions
-[license-image]: https://img.shields.io/github/license/funnyzak/vite-vue-starter.svg?style=flat-square
-[repository-url]: https://github.com/funnyzak/vite-vue-starter
-[repo-size-image]: https://img.shields.io/github/repo-size/funnyzak/vite-vue-starter
-[commit-activity-image]: https://img.shields.io/github/commit-activity/m/funnyzak/vite-vue-starter?style=flat-square
-[last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vite-vue-starter?style=flat-square
-[rle-image]: https://img.shields.io/github/release-date/funnyzak/vite-vue-starter.svg
-[rle-url]: https://github.com/funnyzak/vite-vue-starter/releases/latest
-[sg-url]: https://sourcegraph.com/github.com/funnyzak/vite-vue-starter
+[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vue-starter/Release
+[ci-url]: https://github.com/funnyzak/vue-starter/actions
+[license-image]: https://img.shields.io/github/license/funnyzak/vue-starter.svg?style=flat-square
+[repository-url]: https://github.com/funnyzak/vue-starter
+[repo-size-image]: https://img.shields.io/github/repo-size/funnyzak/vue-starter
+[commit-activity-image]: https://img.shields.io/github/commit-activity/m/funnyzak/vue-starter?style=flat-square
+[last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vue-starter?style=flat-square
+[rle-image]: https://img.shields.io/github/release-date/funnyzak/vue-starter.svg
+[rle-url]: https://github.com/funnyzak/vue-starter/releases/latest
+[sg-url]: https://sourcegraph.com/github.com/funnyzak/vue-starter
 [sg-image]: https://img.shields.io/badge/view%20on-Sourcegraph-brightgreen.svg?style=flat-square
 
 Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[预览](https://vuestarter.yycc.dev/)。
@@ -154,8 +154,8 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 如果你有任何的想法或者意见，欢迎提 Issue 或者 PR。
 
-<a href="https://github.com/funnyzak/vite-vue-starter/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=funnyzak/vite-vue-starter" />
+<a href="https://github.com/funnyzak/vue-starter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=funnyzak/vue-starter" />
 </a>
 
 ## License
