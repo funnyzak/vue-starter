@@ -1,6 +1,9 @@
 // 引入windi css
 import '@/plugins/windi.css';
 
+// 导入全局的svg图标
+import '@/plugins/svgIcon';
+
 // 引入全局样式
 import '@/styles/index.less';
 import './style.css';

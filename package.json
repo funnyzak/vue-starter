@@ -83,6 +83,7 @@
     "unplugin-vue-define-options": "^0.6.2",
     "vite": "^3.0.3",
     "vite-plugin-eslint": "^1.7.0",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-windicss": "^1.8.7",
     "vue-tsc": "^0.39.0",
     "windicss": "^3.5.6"
