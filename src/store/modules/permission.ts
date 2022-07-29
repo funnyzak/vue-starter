@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { store } from '../index';
 import { cloneDeep } from 'lodash-es';
-import remainingRouter from '@/router/modules/remaining';
+import remainingRouter from '@/router/remaining';
 import { generateRoutes, flatMultiLevelRoutes } from '@/utils/routerHelper';
 
 export interface PermissionState {
@@ -31,16 +31,16 @@ export const usePermissionStore = defineStore({
     },
     getIsAddRouters(): boolean {
       return this.isAddRouters;
-    },
-    getMenuTabRouters(): AppRouteRecordRaw[] {
-      return this.menuTabRouters;
     }
   },
   actions: {
-    generateRoutes(routers?: AppCustomRouteRecordRaw[] | string[]): Promise<unknown> {
+    generateRoutes(
+      routers?: AppRouteRecordRaw[] | string[],
+      userPermissions?: string[]
+    ): Promise<unknown> {
       return new Promise<void>((resolve) => {
         let routerMap: AppRouteRecordRaw[] = [];
-        routerMap = generateRoutes(routers as AppCustomRouteRecordRaw[]);
+        routerMap = generateRoutes(routers as AppRouteRecordRaw[], userPermissions);
         // 动态路由，404一定要放到最后面
         this.addRouters = routerMap.concat([
           {
@@ -60,9 +60,6 @@ export const usePermissionStore = defineStore({
     },
     setIsAddRouters(state: boolean): void {
       this.isAddRouters = state;
-    },
-    setMenuTabRouters(routers: AppRouteRecordRaw[]): void {
-      this.menuTabRouters = routers;
     }
   }
 });
