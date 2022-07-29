@@ -29,7 +29,7 @@ jobs:
         working-directory: ./
         run: |
           npm install
-          npm run build
+          npm run build:demo
 
       - name: Build Changelog
         id: build_changelog
@@ -46,12 +46,12 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
-          folder: dist
+          folder: dist-demo
 
       - name: Archive Dist
         uses: papeloto/action-zip@v1
         with:
-          files: dist/
+          files: dist-demo/
           recursive: false
           dest: ${{ env.DIST_ARCHIVE_NAME }}.zip
 
