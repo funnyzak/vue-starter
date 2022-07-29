@@ -1,7 +1,5 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import type { Router, RouteMeta, RouteLocationNormalized, RouteRecordNormalized } from 'vue-router';
 import { isString, isUrl } from '@/utils/is';
-import { omit, cloneDeep } from 'lodash-es';
+import type { RouteLocationNormalized, RouteMeta, RouteRecordNormalized } from 'vue-router';
 import checkPermission from './permission';
 
 const modules = import.meta.glob('../views/**/*.{vue,tsx}');
@@ -130,73 +128,6 @@ export const pathResolve = (parentPath: string, path: string) => {
   return `${parentPath}${childPath}`.replace(/\/\//g, '/');
 };
 
-// 路由降级
-export const flatMultiLevelRoutes = (routes: AppRouteRecordRaw[]) => {
-  const modules: AppRouteRecordRaw[] = cloneDeep(routes);
-  for (let index = 0; index < modules.length; index++) {
-    const route = modules[index];
-    if (!isMultipleRoute(route)) {
-      continue;
-    }
-    promoteRouteLevel(route);
-  }
-  return modules;
-};
-
-// 层级是否大于2
-const isMultipleRoute = (route: AppRouteRecordRaw) => {
-  if (!route || !Reflect.has(route, 'children') || !route.children?.length) {
-    return false;
-  }
-
-  const children = route.children;
-
-  let flag = false;
-  for (let index = 0; index < children.length; index++) {
-    const child = children[index];
-    if (child.children?.length) {
-      flag = true;
-      break;
-    }
-  }
-  return flag;
-};
-
-// 生成二级路由
-const promoteRouteLevel = (route: AppRouteRecordRaw) => {
-  let router: Router | null = createRouter({
-    routes: [route as RouteRecordRaw],
-    history: createWebHashHistory()
-  });
-
-  const routes = router.getRoutes();
-  addToChildren(routes, route.children || [], route);
-  router = null;
-
-  route.children = route.children?.map((item) => omit(item, 'children'));
-};
-
-// 添加子路由
-const addToChildren = (
-  routes: RouteRecordNormalized[],
-  children: AppRouteRecordRaw[],
-  routeModule: AppRouteRecordRaw
-) => {
-  for (let index = 0; index < children.length; index++) {
-    const child = children[index];
-    const route = routes.find((item) => item.name === child.name);
-    if (!route) {
-      continue;
-    }
-    routeModule.children = routeModule.children || [];
-    if (!routeModule.children.find((item) => item.name === route.name)) {
-      routeModule.children?.push(route as unknown as AppRouteRecordRaw);
-    }
-    if (child.children?.length) {
-      addToChildren(routes, child.children, routeModule);
-    }
-  }
-};
 function toCamelCase(str: string, upperCaseFirst: boolean) {
   str = (str || '').toLowerCase().replace(/-(.)/g, function (group1: string) {
     return group1.toUpperCase();

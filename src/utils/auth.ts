@@ -6,6 +6,15 @@ const { wsCache } = useCache();
 const AccessTokenKey = 'ACCESS_TOKEN';
 const RefreshTokenKey = 'REFRESH_TOKEN';
 
+export const clearAuth = () => {
+  removeToken();
+  wsCache.delete('user');
+};
+
+export const getPermissionList = () => {
+  return (wsCache.get('user').permissions as string[]) || [];
+};
+
 // 获取token
 export const getAccessToken = () => {
   return wsCache.get(AccessTokenKey);
@@ -31,10 +40,6 @@ export const removeToken = () => {
 const UsernameKey = 'USERNAME';
 const PasswordKey = 'PASSWORD';
 const RememberMeKey = 'REMEMBER_ME';
-
-export const getPermissionList = () => {
-  return (wsCache.get('user').permissions as string[]) || [];
-};
 
 export const getUsername = () => {
   return wsCache.get(UsernameKey);

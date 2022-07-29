@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// import { useRouter } from 'vue-router';
+
 import HelloWorld from '@/components/HelloWorld.vue';
 
 import { computed } from 'vue';
@@ -6,6 +8,8 @@ import { useLocaleStoreWithOut } from '@/store/modules/locale';
 import { useAppStore } from '@/store/modules/app';
 import { useLocale, useI18n } from '@/hooks';
 import { useMouse, useCounter } from '@vueuse/core';
+
+// const { push } = useRouter();
 
 const { x, y } = useMouse();
 const { count, inc, dec } = useCounter();
@@ -19,37 +23,40 @@ const appName = computed(() => appStore.getAppName);
 </script>
 
 <template>
-  <div>
-    <dl>
-      <dt style="display: inline">{{ t('common.locale') }}</dt>
+  <div class="container mx-auto flex flex-col w-80% items-center pt-15 space-y-3 text-center">
+    <dl class="inline-grid grid-rows-1 grid-cols-3 mx-auto">
+      <dt>{{ t('common.locale') }}</dt>
       <dd
         v-for="(localMap, idx) in localeStore.getLocaleMaps"
         :key="idx"
         :style="{
-          cursor: 'pointer',
-          display: 'inline',
           color: localeStore.getCurrentLocale.lang === localMap.lang ? 'blue' : 'black'
         }"
+        class="pr-2"
         @click="changeLocale(localMap.lang)"
       >
         {{ localMap.name }}
       </dd>
     </dl>
-
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-    <div>Mouse: {{ x }} x {{ y }}</div>
-    <div>
+    <div class="flex sm:flex-row <sm:flex-col <sm:space-y-10 mx-auto sm:space-x-10">
+      <a href="https://vitejs.dev" target="_blank">
+        <img src="/vite.svg" class="w-30" alt="Vite logo" />
+      </a>
+      <a href="https://vuejs.org/" target="_blank">
+        <img src="@/assets/vue.svg" class="w-30" alt="Vue logo" />
+      </a>
+    </div>
+    <div class="text-center">Mouse: {{ x }} x {{ y }}</div>
+    <div class="border-blue-200">
       Counter: {{ count }}
       <a @click="inc()" style="margin-right: 10px">+</a>
       <a @click="dec()">-</a>
     </div>
+    <div> 权限例子：<router-link to="/user/message">进入用户中心</router-link> </div>
   </div>
-  <HelloWorld :msg="appName" />
+  <div class="text-center mt-10 space-y-4">
+    <HelloWorld :msg="appName" />
+  </div>
 </template>
 
 <style scoped>

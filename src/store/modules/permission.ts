@@ -1,9 +1,9 @@
+import { allModulesRoutes } from '@/router/modules';
+import remainingRouter from '@/router/remaining';
+import { generateRoutes } from '@/utils/routerHelper';
+import { cloneDeep } from 'lodash-es';
 import { defineStore } from 'pinia';
 import { store } from '../index';
-import { cloneDeep } from 'lodash-es';
-import remainingRouter from '@/router/remaining';
-import { generateRoutes, flatMultiLevelRoutes } from '@/utils/routerHelper';
-import { allModulesRoutes } from '@/router/modules';
 
 export interface PermissionState {
   routers: AppRouteRecordRaw[];
@@ -28,7 +28,7 @@ export const usePermissionStore = defineStore({
       return this.routers;
     },
     getAddRouters(): AppRouteRecordRaw[] {
-      return flatMultiLevelRoutes(cloneDeep(this.addRouters));
+      return cloneDeep(this.addRouters);
     },
     getIsAddRouters(): boolean {
       return this.isAddRouters;

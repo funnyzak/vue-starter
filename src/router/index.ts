@@ -22,7 +22,7 @@ const router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 })
 });
 
-// 路由不重定向白名单
+// 路由不重定向白名单，不需要登陆即可访问
 const whiteList = ['/login', '/home'];
 
 // 路由加载前

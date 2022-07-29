@@ -50,7 +50,7 @@ const handleLogin = async () => {
   });
 
   // 跳转到授权页
-  push({ name: 'UserMessage' });
+  push({ path: '/user/message' });
 };
 
 watch(
@@ -64,8 +64,10 @@ watch(
 );
 </script>
 <template>
-  <div>
+  <div class="text-center mt-30">
     <div>{{ appStore.getAppName }}</div>
-    <button @click="handleLogin">{{ t('common.login') }}</button>
+    你还没有登陆哦，现在
+    <button class="btn" @click="handleLogin">{{ t('common.login') }}</button
+    >？
   </div>
 </template>
