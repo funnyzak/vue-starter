@@ -1,6 +1,8 @@
 {
   "recommendations": [
     "vue.volar",
-    "Lokalise.i18n-ally"
+    "Lokalise.i18n-ally",
+    "voorjaar.windicss-intellisense",
+    "esbenp.prettier-vscode"
   ]
 }

@@ -24,7 +24,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 ## 特性
 
 - Typescript 支持
-- CSS 预处理 less、sass、stylus
+- CSS 预处理 less、sass、stylus、WindiCSS
 - Locale 国际化
 - 多页面应用模式
 - Plop 支持
@@ -114,6 +114,7 @@ npm run serve:test
     │  ├── directives                            // 指令目录
     │  ├── hooks                                 // 钩子目录
     │  ├── locales                               // 国际化目录
+    │  ├── views                                 // 视图目录
     │  ├── pages                                 // 页面目录
     │  ├── plugins                               // 插件目录
     │  ├── store                                 // 状态管理
@@ -121,6 +122,7 @@ npm run serve:test
     │  ├── utils                                 // 工具函数目录
     │  └── vite-env.d.ts                         // vite 环境配置文件
     ├── tsconfig.json                            // TypeScript 配置文件
+    ├── windi.config.ts                          // Windi 配置文件
     ├── tsconfig.node.json
     ├── types                                    // 类型文件目录
     └── vite.config.ts                           // vite 配置文件
