@@ -11,6 +11,8 @@ import { defineComponent } from 'vue';
     icon: 'svg-name'          设置该路由的图标
 
     noCache: true             如果设置为true，则不会被 <keep-alive> 缓存(默认 false)
+
+    roles: ['admin','editor']  设置该路由进入的权限，这里演示了有两种权限可以访问
   }
 **/
 declare module 'vue-router' {
@@ -18,6 +20,8 @@ declare module 'vue-router' {
     title?: string;
     icon?: string;
     noCache?: boolean;
+    roles?: string[];
+    permissions?: PermissionLogic;
   }
 }
 
@@ -34,18 +38,8 @@ declare global {
     children?: AppRouteRecordRaw[];
     props?: Recordable;
     fullPath?: string;
-    keepAlive?: boolean;
-  }
-
-  declare interface AppCustomRouteRecordRaw extends Omit<RouteRecordRaw, 'meta'> {
-    icon: any;
-    name: string;
-    meta: RouteMeta;
-    component: string;
-    path: string;
-    redirect: string;
-    children?: AppCustomRouteRecordRaw[];
-    keepAlive?: boolean;
     visible?: boolean;
+    keepAlive?: boolean;
+    icon?: string;
   }
 }

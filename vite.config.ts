@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import EslintPlugin from 'vite-plugin-eslint';
 
 import legacy from '@vitejs/plugin-legacy';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
 import DefineOptions from 'unplugin-vue-define-options/vite';
 import WindiCSS from 'vite-plugin-windicss';
@@ -141,6 +142,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       EslintPlugin({
         cache: false,
         include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'] // 检查的文件
+      }),
+      createSvgIconsPlugin({
+        iconDirs: [pathResolve('src/assets/svgs')],
+        symbolId: 'icon-[dir]-[name]',
+        svgoOptions: true
       })
     ]
   };

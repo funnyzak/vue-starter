@@ -15,24 +15,11 @@ export type TokenType = {
   expiresTime: number; //过期时间
 };
 
-export type UserVO = {
-  id: number;
-  username: string;
-  nickname: string;
-  deptId: number;
-  email: string;
-  mobile: string;
-  sex: number;
-  avatar: string;
-  loginIp: string;
-  loginDate: string;
-};
-
 export type UserInfoVO = {
-  permissions: [];
-  roles: [];
+  permissions: string[];
+  roles: string[];
   user: {
-    avatar: string;
+    avatar?: string;
     id: number;
     nickname: string;
   };

@@ -32,6 +32,10 @@ const UsernameKey = 'USERNAME';
 const PasswordKey = 'PASSWORD';
 const RememberMeKey = 'REMEMBER_ME';
 
+export const getPermissionList = () => {
+  return (wsCache.get('user').permissions as string[]) || [];
+};
+
 export const getUsername = () => {
   return wsCache.get(UsernameKey);
 };
