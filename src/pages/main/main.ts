@@ -22,6 +22,9 @@ import { setupI18n } from '@/plugins/vueI18n';
 // 权限
 import { setupAuth } from '@/directives';
 
+// 路由
+import { setupRouter } from '@/router';
+
 import { createApp } from 'vue';
 
 // 创建实例
@@ -31,6 +34,8 @@ const setupAll = async () => {
   await setupI18n(app);
 
   setupAuth(app);
+
+  setupRouter(app);
 
   setupStore(app);
 
