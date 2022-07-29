@@ -32,13 +32,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   env = loadEnv(mode, rootPath, '');
 
   // console.log(command, mode, JSON.stringify(env), ssrBuild);
-  // console.log(env.APP_ENV, process.env.APP_ENV);
+  console.log(env);
 
   const viteConfig = {
     // 项目根目录（index.html 文件所在的位置）。可以是一个绝对路径，或者一个相对于该配置文件本身的相对路径。
     root: './',
     // 开发或生产环境服务的公共基础路径。
-    base: env.VITE_BASE_PATH,
+    base: './',
     // 作为静态资源服务的文件夹。该目录中的文件在开发期间在 / 处提供，并在构建期间复制到 outDir 的根目录，并且始终按原样提供或复制而无需进行转换。该值可以是文件系统的绝对路径，也可以是相对于项目的根目录的相对路径。
     publicDir: 'public',
     resolve: {
