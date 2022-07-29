@@ -16,7 +16,7 @@ const userRouter: AppRouteRecordRaw[] = [
         name: 'UserMessage',
         meta: {
           title: t('router.userMessage'),
-          Permissions: ['user.message']
+          permissions: { list: ['user.message'] }
         }
       }
     ]

@@ -6,7 +6,7 @@ import { useCache } from '@/hooks/web/useCache';
  * @param userPermissions 所拥有的功能权限
  */
 export default function checkPermission(
-  permissionValue: PermissionLogic,
+  permissionValue?: PermissionLogic,
   permissionList?: string[]
 ) {
   /**

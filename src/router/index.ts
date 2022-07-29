@@ -8,8 +8,6 @@ import { usePageLoading } from '@/hooks/web/usePageLoading';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { usePermissionStoreWithOut } from '@/store/modules/permission';
 
-import moduleRouterMap from './modules';
-
 const permissionStore = usePermissionStoreWithOut();
 
 const { start, done } = useNProgress();
@@ -43,12 +41,7 @@ router.beforeEach(async (to, from, next) => {
         return;
       }
 
-      const allModulesRouters = Object.values(moduleRouterMap).reduce(
-        (pre: AppRouteRecordRaw[], cur: AppRouteRecordRaw[]) => {
-          return pre.concat(cur);
-        }
-      );
-      await permissionStore.generateRoutes(allModulesRouters, getPermissionList());
+      await permissionStore.generateRoutes(getPermissionList());
 
       permissionStore.getAddRouters.forEach((route) => {
         router.addRoute(route as unknown as RouteRecordRaw); // 动态添加可访问路由表

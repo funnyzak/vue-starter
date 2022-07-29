@@ -2,8 +2,7 @@ import { Layout } from '@/utils/routerHelper';
 import { useI18n } from '@/hooks/web/useI18n';
 const { t } = useI18n();
 
-// 此路由不需要权限
-
+// 此路由不需要权限绑定，属于公共路由，不过也需奥登陆
 const remainingRouter: AppRouteRecordRaw[] = [
   {
     path: '/redirect',

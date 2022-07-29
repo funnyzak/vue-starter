@@ -1,9 +1,12 @@
+// 业务路由集合
 import userRouters from './user';
 
-const routerMap: {
+const routeMap: {
   [key: string]: AppRouteRecordRaw[];
 } = {
   user: userRouters
 };
 
-export default routerMap;
+export const allModulesRoutes = userRouters;
+
+export default routeMap;

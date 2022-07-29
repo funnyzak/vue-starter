@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import type { Router, RouteLocationNormalized, RouteRecordNormalized } from 'vue-router';
-import { isUrl } from '@/utils/is';
+import type { Router, RouteMeta, RouteLocationNormalized, RouteRecordNormalized } from 'vue-router';
+import { isString, isUrl } from '@/utils/is';
 import { omit, cloneDeep } from 'lodash-es';
+import checkPermission from './permission';
 
 const modules = import.meta.glob('../views/**/*.{vue,tsx}');
 
@@ -48,10 +49,19 @@ export const getRawRoute = (route: RouteLocationNormalized): RouteLocationNormal
 };
 
 // 路由生成
-export const generateRoutes = (routes: AppCustomRouteRecordRaw[]): AppRouteRecordRaw[] => {
+export const generateRoutes = (
+  routes: AppRouteRecordRaw[],
+  userPermissions?: string[]
+): AppRouteRecordRaw[] => {
   const res: AppRouteRecordRaw[] = [];
   const modulesRoutesKeys = Object.keys(modules);
+
   for (const route of routes) {
+    // 如果没有权限则忽略此路由
+    if (!checkPermission((route.meta as RouteMeta)?.permissions, userPermissions)) {
+      continue;
+    }
+
     const meta = {
       title: route.name,
       icon: route.icon,
@@ -79,11 +89,15 @@ export const generateRoutes = (routes: AppCustomRouteRecordRaw[]): AppRouteRecor
       } as AppRouteRecordRaw;
       // 菜单
     } else {
-      // 对传component组件路径和不传做兼容（如果传component组件路径，那么path可以随便写，如果不传，component组件路径会根path保持一致）
-      const index = route?.component
-        ? modulesRoutesKeys.findIndex((ev) => ev.includes(route.component))
-        : modulesRoutesKeys.findIndex((ev) => ev.includes(route.path));
-      data.component = modules[modulesRoutesKeys[index]];
+      if (route?.component && !isString(route.component)) {
+        data.component = route.component;
+      } else {
+        // 对传component组件路径和不传做兼容（如果传component组件路径，那么path可以随便写，如果不传，component组件路径会根path保持一致）
+        const index = route?.component
+          ? modulesRoutesKeys.findIndex((ev) => ev.includes(route.component))
+          : modulesRoutesKeys.findIndex((ev) => ev.includes(route.path));
+        data.component = modules[modulesRoutesKeys[index]];
+      }
     }
     if (route.children) {
       data.children = generateRoutes(route.children);
@@ -92,7 +106,7 @@ export const generateRoutes = (routes: AppCustomRouteRecordRaw[]): AppRouteRecor
   }
   return res;
 };
-export const getRedirect = (parentPath: string, children: AppCustomRouteRecordRaw[]): string => {
+export const getRedirect = (parentPath: string, children: AppRouteRecordRaw[]): string => {
   if (!children || children.length == 0) {
     return parentPath;
   }
@@ -162,7 +176,7 @@ const promoteRouteLevel = (route: AppRouteRecordRaw) => {
   route.children = route.children?.map((item) => omit(item, 'children'));
 };
 
-// 添加子菜单
+// 添加子路由
 const addToChildren = (
   routes: RouteRecordNormalized[],
   children: AppRouteRecordRaw[],

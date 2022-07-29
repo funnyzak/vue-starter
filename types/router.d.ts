@@ -13,8 +13,6 @@ import { defineComponent } from 'vue';
     noCache: true             如果设置为true，则不会被 <keep-alive> 缓存(默认 false)
 
     roles: ['admin','editor']  设置该路由进入的权限，这里演示了有两种权限可以访问
-
-    permission: ['can_add','can_delete'] 设置该路由进入的权限，这里演示了有两种权限可以访问
   }
 **/
 declare module 'vue-router' {
@@ -23,7 +21,7 @@ declare module 'vue-router' {
     icon?: string;
     noCache?: boolean;
     roles?: string[];
-    permission?: PermissionLogic;
+    permissions?: PermissionLogic;
   }
 }
 
