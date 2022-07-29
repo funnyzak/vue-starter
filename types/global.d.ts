@@ -23,7 +23,7 @@ declare type AxiosResponseType = 'arraybuffer' | 'blob' | 'document' | 'json' | 
 
 declare type PermissionLogic = {
   logic?: 'OR' | 'AND';
-  permissions: string[];
+  list: string[];
 };
 
 declare interface AxiosConfig {

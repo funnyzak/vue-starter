@@ -23,7 +23,7 @@ export default function checkPermission(
     permissionList = (wsCache.get('user').permissions as string[]) || [];
   }
 
-  const { logic, permissions } = permissionValue;
+  const { logic, list: permissions } = permissionValue;
 
   if (logic === 'OR' || !logic) {
     return permissions.some((permission) => {
