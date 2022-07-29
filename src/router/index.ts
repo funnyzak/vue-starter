@@ -7,6 +7,7 @@ import { useNProgress } from '@/hooks/web/useNProgress';
 import { usePageLoading } from '@/hooks/web/usePageLoading';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { usePermissionStoreWithOut } from '@/store/modules/permission';
+import { allModulesRoutes } from './modules';
 
 const permissionStore = usePermissionStoreWithOut();
 
@@ -71,11 +72,22 @@ router.afterEach((to) => {
 });
 
 // 移除非白名单路由
-export const resetRouter = (): void => {
+export const resetRouterLeaveWhiteList = (): void => {
   const resetWhiteNameList = ['Redirect', 'Login', 'Home'];
   router.getRoutes().forEach((route) => {
     const { name } = route;
     if (name && !resetWhiteNameList.includes(name as string)) {
+      router.hasRoute(name) && router.removeRoute(name);
+    }
+  });
+};
+
+// 只留其他路由
+export const resetRouterLeaveRemain = (): void => {
+  router.getRoutes().forEach((route) => {
+    const { name } = route;
+    console.log(name);
+    if (name && allModulesRoutes.map((v) => v.name).includes(name as string)) {
       router.hasRoute(name) && router.removeRoute(name);
     }
   });

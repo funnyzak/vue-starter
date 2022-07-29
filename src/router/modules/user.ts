@@ -7,17 +7,17 @@ const userRouter: AppRouteRecordRaw[] = [
     path: '/user',
     component: Layout,
     name: 'User',
-    redirect: '/user/message',
+    redirect: '/user/home',
     meta: {},
     icon: undefined,
     children: [
       {
-        path: 'message',
-        component: () => import('@/views/User/Message.vue'),
+        path: 'home',
+        component: () => import('@/views/User/Index.vue'),
         name: 'UserMessage',
         meta: {
           title: t('router.userMessage'),
-          permissions: { list: ['user.message'] }
+          permissions: { list: ['user.home'] }
         }
       }
     ]

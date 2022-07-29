@@ -32,7 +32,7 @@ const userInfo = {
     id: 1,
     nickname: 'leon'
   },
-  permissions: ['user.message'],
+  permissions: ['user.home'],
   roles: []
 };
 

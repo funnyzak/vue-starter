@@ -2,6 +2,7 @@
 import { useRouter } from 'vue-router';
 import { useI18n } from '@/hooks/web/useI18n';
 import { clearAuth } from '@/utils/auth';
+import { resetRouterLeaveRemain } from '@/router';
 const { t } = useI18n();
 
 const { push } = useRouter();
@@ -22,7 +23,8 @@ const { push } = useRouter();
       @click="
         () => {
           clearAuth();
-          push('/');
+          resetRouterLeaveRemain();
+          push({ name: 'HomeIndex' });
         }
       "
       >{{ t('common.logout') }}</button

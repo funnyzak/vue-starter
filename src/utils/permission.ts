@@ -34,7 +34,7 @@ export default function checkPermission(
       return permissionList!.includes(permission);
     });
   } else {
-    console.error(`need permissions! Like v-permission="['user.message']"`);
+    console.error(`need permissions! Like v-permission="['user.home']"`);
     return false;
   }
 }

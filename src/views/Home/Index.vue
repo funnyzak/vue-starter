@@ -52,7 +52,7 @@ const appName = computed(() => appStore.getAppName);
       <a @click="inc()" style="margin-right: 10px">+</a>
       <a @click="dec()">-</a>
     </div>
-    <div> 权限例子：<router-link to="/user/message">进入用户中心</router-link> </div>
+    <div> 权限例子：<router-link to="/user/home">进入用户中心</router-link> </div>
   </div>
   <div class="text-center mt-10 space-y-4">
     <HelloWorld :msg="appName" />

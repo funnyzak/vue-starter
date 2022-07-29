@@ -28,7 +28,7 @@ const remainingRouter: AppRouteRecordRaw[] = [
       {
         path: 'home',
         component: () => import('@/views/Home/Index.vue'),
-        name: 'Index',
+        name: 'HomeIndex',
         meta: {
           title: t('router.home'),
           noCache: true
