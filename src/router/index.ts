@@ -18,7 +18,7 @@ const { loadStart, loadDone } = usePageLoading();
 const router = createRouter({
   history: createWebHashHistory(),
   strict: true,
-  routes: remainingRouter as RouteRecordRaw[],
+  routes: remainingRouter as RouteRecordRaw[], // 默认加载其他路由
   scrollBehavior: () => ({ left: 0, top: 0 })
 });
 
@@ -31,6 +31,7 @@ router.beforeEach(async (to, from, next) => {
   loadStart();
 
   if (getAccessToken()) {
+    // 如果用户登陆
     // if logined
     if (to.path === '/login') {
       // if login page, then redirect to home page
@@ -54,9 +55,11 @@ router.beforeEach(async (to, from, next) => {
     }
   } else {
     if (whiteList.indexOf(to.path) !== -1) {
+      // 如果白名单则放行
       next();
     } else {
-      next(`/login?redirect=${to.path}`); // 否则全部重定向到登录页
+      // 如果非白名单则统一重定向到登陆页
+      next(`/login?redirect=${to.path}`);
     }
   }
 });
@@ -69,7 +72,7 @@ router.afterEach((to) => {
 
 // 移除非白名单路由
 export const resetRouter = (): void => {
-  const resetWhiteNameList = ['Redirect', 'Login', 'NoFind', 'Root'];
+  const resetWhiteNameList = ['Redirect', 'Login', 'Home'];
   router.getRoutes().forEach((route) => {
     const { name } = route;
     if (name && !resetWhiteNameList.includes(name as string)) {

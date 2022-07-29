@@ -1,7 +1,7 @@
 {
   "name": "vue-starter",
   "private": false,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "基于vue3、typesScript、vite3 开发脚手架",
   "type": "module",
   "repository": {

@@ -36,6 +36,8 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - 使用 Axios 进行 Http API 请求
 - 支持 JSX 语法
 - 引入 Animite.css
+- 使用 vue-Router
+- 实现了一套根据权限 Code 控制路由的逻辑
 - Utils 通用工具函数
 
 ## 使用
@@ -110,20 +112,28 @@ npm run windicss-analysis
     ├── prettier.config.cjs                      // prettier 配置文件
     ├── public                                   // 项目公共目录
     ├── src                                      // 项目源码目录
-    │  ├── assets                                // 静态资源目录
-    │  |── api                                   // api 接口目录
-    │  ├── components                            // 组件目录
-    │  ├── config                                // 配置目录
-    │  ├── directives                            // 指令目录
-    │  ├── hooks                                 // 钩子目录
-    │  ├── locales                               // 国际化目录
-    │  ├── views                                 // 视图目录
-    │  ├── pages                                 // 页面目录
-    │  ├── plugins                               // 插件目录
-    │  ├── store                                 // 状态管理
-    │  ├── styles                                // 样式目录
-    │  ├── utils                                 // 工具函数目录
-    │  └── vite-env.d.ts                         // vite 环境配置文件
+    ├── router
+    │   ├── index.ts                             // 路由入口
+    │   ├── modules                              // 业务路由模块，用户登陆后的根据用户权限进行动态路由添加
+    │   │   ├── index.ts
+    │   │   └── user.ts
+    │   └── remaining.ts                         // 其他路由，用户登陆后，不需要权限即可访问的路由
+    │   ├── assets                               // 静态资源目录
+    │   |── api                                  // api 接口目录
+    │   ├── components                           // 组件目录
+    │   ├── config                               // 配置目录
+    │   ├── directives                           // 指令目录
+    │   ├── hooks                                // 钩子目录
+    │   ├── locales                              // 国际化目录
+    │   ├── views                                // 视图目录
+    │   ├── pages                                // 页面目录
+    │   ├── plugins                              // 插件目录
+    │   ├── store                                // 状态管理
+    │   ├── styles                               // 样式目录
+    │   ├── utils                                // 工具函数目录
+    │   ├── main.ts                              // 项目入口文件
+    │   ├── App.vue                              // 项目入口组件
+    │   └── vite-env.d.ts                        // vite 环境配置文件
     ├── tsconfig.json                            // TypeScript 配置文件
     ├── windi.config.ts                          // Windi 配置文件
     ├── tsconfig.node.json
@@ -153,14 +163,13 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 - [vite plugin](https://cn.vitejs.dev/plugins/)
 - [awesome vite plugin](https://github.com/vitejs/awesome-vite#plugins)
 - [Babel Config](https://babel.docschina.org/docs/en/7.0.0/configuration/)
-- [EsLint](https://eslint.org/docs/user-guide/configuring/)
 - [eslintignore-file](https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file)
 - [TSconfig](https://www.typescriptlang.org/tsconfig/)
 - [npmrc](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc)
 - [gitignore](https://git-scm.com/docs/gitignore)
-- [webpack](https://webpack.docschina.org/guides/getting-started/)
 - [prettier](https://prettier.io/docs/en/index.html)
 - [ruoyi](https://github.dev/YunaiV/ruoyi-vue-pro/)
+- [EsLint](https://eslint.org/docs/user-guide/configuring/)
 
 ## Contribution
 
