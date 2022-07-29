@@ -21,12 +21,12 @@ const remainingRouter: AppRouteRecordRaw[] = [
   {
     path: '/',
     component: Layout,
-    redirect: '/index',
+    redirect: '/home',
     name: 'Home',
     meta: {},
     children: [
       {
-        path: 'index',
+        path: 'home',
         component: () => import('@/views/Home/Index.vue'),
         name: 'Index',
         meta: {

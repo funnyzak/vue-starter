@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue';
+
 import { computed } from 'vue';
 import { useLocaleStoreWithOut } from '@/store/modules/locale';
 import { useAppStore } from '@/store/modules/app';

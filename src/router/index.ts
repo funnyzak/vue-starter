@@ -23,7 +23,7 @@ const router = createRouter({
 });
 
 // 路由不重定向白名单
-const whiteList = ['/login'];
+const whiteList = ['/login', '/home'];
 
 // 路由加载前
 router.beforeEach(async (to, from, next) => {

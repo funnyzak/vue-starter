@@ -6,7 +6,6 @@ import '@/plugins/svgIcon';
 
 // 引入全局样式
 import '@/styles/index.less';
-import './style.css';
 
 // 引入动画
 import '@/plugins/animate.css';
