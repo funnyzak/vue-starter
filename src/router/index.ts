@@ -91,6 +91,7 @@ export const resetRouterLeaveRemain = (): void => {
       router.hasRoute(name) && router.removeRoute(name);
     }
   });
+  permissionStore.setIsAddRouters(false);
 };
 
 // 设置路由

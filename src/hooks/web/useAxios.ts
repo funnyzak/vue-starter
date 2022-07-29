@@ -20,22 +20,22 @@ const request = (option: AxiosConfig) => {
 
 async function getFn<T = any>(option: AxiosConfig): Promise<T> {
   const res = await request({ method: 'GET', ...option });
-  return res.data;
+  return res.data || res;
 }
 
 async function postFn<T = any>(option: AxiosConfig): Promise<T> {
   const res = await request({ method: 'POST', ...option });
-  return res.data;
+  return res.data || res;
 }
 
 async function deleteFn<T = any>(option: AxiosConfig): Promise<T> {
   const res = await request({ method: 'DELETE', ...option });
-  return res.data;
+  return res.data || res;
 }
 
 async function putFn<T = any>(option: AxiosConfig): Promise<T> {
   const res = await request({ method: 'PUT', ...option });
-  return res.data;
+  return res.data || res;
 }
 
 export const useAxios = () => {

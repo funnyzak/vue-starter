@@ -19,6 +19,16 @@ const userRouter: AppRouteRecordRaw[] = [
           title: t('router.userMessage'),
           permissions: { list: ['user.home'] }
         }
+      },
+      {
+        path: 'post',
+        component: () => import('@/views/User/Post.vue'),
+        name: 'UserPost',
+        keepAlive: true,
+        meta: {
+          title: t('router.userMessage'),
+          permissions: { list: ['user.home'] }
+        }
       }
     ]
   }

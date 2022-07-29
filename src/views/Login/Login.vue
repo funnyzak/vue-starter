@@ -15,7 +15,7 @@ const permissionStore = usePermissionStore();
 
 const redirect = ref<string>('');
 
-const { currentRoute, addRoute, push } = useRouter();
+const { currentRoute, addRoute, push, back } = useRouter();
 
 const userToken = {
   id: 1,
@@ -71,5 +71,7 @@ watch(
     你还没有登陆哦，现在
     <button class="btn" @click="handleLogin">{{ t('common.login') }}</button
     >？
+
+    <button class="btn" @click="back">{{ t('common.back') }}</button>
   </div>
 </template>

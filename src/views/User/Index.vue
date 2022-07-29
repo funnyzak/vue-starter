@@ -8,18 +8,25 @@ const { t } = useI18n();
 const { push } = useRouter();
 </script>
 <template>
-  <section class="mt-10 text-center space-y-2 space-x-2">
+  <section class="flex mt-10 text-center space-y-2 space-x-2 flex-col">
     <div class="mx-auto">这里是用户中心。</div>
     <button
       @click="
         () => {
-          push('/');
+          push({ name: 'UserPost' });
+        }
+      "
+      >{{ t('router.post') }}</button
+    >
+    <button
+      @click="
+        () => {
+          push({ name: 'HomeIndex' });
         }
       "
       >{{ t('common.back') }}</button
     >
     <button
-      class="underline-blue-500"
       @click="
         () => {
           clearAuth();

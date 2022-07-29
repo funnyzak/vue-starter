@@ -1,4 +1,4 @@
-import { useCache } from '@/hooks/web/useCache';
+import { getPermissionList } from './auth';
 
 /**
  * 判断用户对某个资源是否有权限
@@ -19,8 +19,7 @@ export default function checkPermission(
 
   // 如果未传权限列表则使用缓存的权限列表
   if (!permissionList) {
-    const { wsCache } = useCache();
-    permissionList = (wsCache.get('user').permissions as string[]) || [];
+    permissionList = getPermissionList();
   }
 
   const { logic, list: permissions } = permissionValue;

@@ -66,6 +66,7 @@ export const generateRoutes = (
       name: route.name || toCamelCase(route.path, true),
       meta: {
         ...route.meta,
+        noCache: route.meta?.noCache || !route.keepAlive,
         title: route.meta?.title || route.name,
         icon: route.meta?.icon || route.icon
       }
@@ -98,7 +99,7 @@ export const generateRoutes = (
       }
     }
     if (route.children) {
-      data.children = generateRoutes(route.children);
+      data.children = generateRoutes(route.children, userPermissions);
     }
     res.push(data);
   }

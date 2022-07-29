@@ -12,7 +12,12 @@ export const clearAuth = () => {
 };
 
 export const getPermissionList = () => {
-  return (wsCache.get('user').permissions as string[]) || [];
+  return wsCache.get('user') &&
+    wsCache.get('user') !== null &&
+    wsCache.get('user').permissions &&
+    wsCache.get('user').permissions !== null
+    ? (wsCache.get('user')?.permissions as string[])
+    : [];
 };
 
 // 获取token

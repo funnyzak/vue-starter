@@ -130,7 +130,8 @@ export default {
   router: {
     login: 'Login',
     userMessage: 'User Message',
-    home: 'Home'
+    home: 'Home',
+    post: 'Post'
   },
   sys: {
     api: {
