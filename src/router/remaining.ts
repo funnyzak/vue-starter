@@ -2,6 +2,8 @@ import { Layout } from '@/utils/routerHelper';
 import { useI18n } from '@/hooks/web/useI18n';
 const { t } = useI18n();
 
+// 此路由不需要权限
+
 const remainingRouter: AppRouteRecordRaw[] = [
   {
     path: '/redirect',

@@ -34,13 +34,10 @@ export const usePermissionStore = defineStore({
     }
   },
   actions: {
-    generateRoutes(
-      routers?: AppRouteRecordRaw[] | string[],
-      userPermissions?: string[]
-    ): Promise<unknown> {
+    generateRoutes(userPermissions: string[]): Promise<unknown> {
       return new Promise<void>((resolve) => {
         let routerMap: AppRouteRecordRaw[] = [];
-        routerMap = generateRoutes(routers as AppRouteRecordRaw[], userPermissions);
+        routerMap = generateRoutes(userPermissions);
         // 动态路由，404一定要放到最后面
         this.addRouters = routerMap.concat([
           {
