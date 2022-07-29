@@ -17,7 +17,7 @@
   "author": "leon <silenceace@gmail.com>",
   "scripts": {
     "i": "npm install",
-    "dev": "vite --mode development",
+    "dev": "vite --debug --mode development",
     "build": "npm run ts:check && vite build --mode production",
     "ts:check": "vue-tsc --noEmit",
     "build:prod": "vite build --mode production",

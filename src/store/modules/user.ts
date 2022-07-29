@@ -40,6 +40,7 @@ export const useUserStore = defineStore({
       this.permissions = userInfo.permissions;
       this.roles = userInfo.roles;
       this.user = userInfo.user;
+
       wsCache.set('user', userInfo);
     },
     resetState() {

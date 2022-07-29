@@ -60,17 +60,17 @@ export const generateRoutes = (
       continue;
     }
 
-    const meta = {
-      title: route.name,
-      icon: route.icon,
-      noCache: !route.keepAlive
-    };
     // 路由地址转首字母大写驼峰，作为路由名称，适配keepAlive
     let data: AppRouteRecordRaw = {
-      path: route.path,
-      name: toCamelCase(route.path, true),
-      meta: meta
+      ...route,
+      name: route.name || toCamelCase(route.path, true),
+      meta: {
+        ...route.meta,
+        title: route.meta?.title || route.name,
+        icon: route.meta?.icon || route.icon
+      }
     };
+
     // 目录
     if (route.children) {
       data.component = Layout;

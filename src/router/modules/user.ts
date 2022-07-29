@@ -9,6 +9,7 @@ const userRouter: AppRouteRecordRaw[] = [
     name: 'User',
     redirect: '/user/message',
     meta: {},
+    icon: undefined,
     children: [
       {
         path: 'message',

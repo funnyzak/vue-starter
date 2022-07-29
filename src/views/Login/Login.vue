@@ -49,8 +49,10 @@ const handleLogin = async () => {
     addRoute(route as RouteRecordRaw); // 动态添加可访问路由表
   });
 
+  permissionStore.setIsAddRouters(true);
+
   // 跳转到授权页
-  push({ path: '/user/message' });
+  push({ name: 'UserMessage' });
 };
 
 watch(
