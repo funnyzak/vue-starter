@@ -80,6 +80,9 @@ npm run p
 npm run serve:dev
 npm run serve:prod
 npm run serve:test
+
+# windicss-analysis
+npm run windicss-analysis
 ```
 
 ## 目录

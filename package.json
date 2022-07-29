@@ -34,7 +34,8 @@
     "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "lint:staged": "lint-staged",
     "p": "plop",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "windicss-analysis": "windicss-analysis"
   },
   "dependencies": {
     "@vueuse/core": "^9.0.0",
@@ -86,7 +87,8 @@
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-windicss": "^1.8.7",
     "vue-tsc": "^0.39.0",
-    "windicss": "^3.5.6"
+    "windicss": "^3.5.6",
+    "windicss-analysis": "^0.3.5"
   },
   "lint-staged": {
     "*.{js,cjs,jsx,vue,ts,tsx}": [
