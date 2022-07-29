@@ -16,11 +16,6 @@
 
 Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[预览](https://vuestarter.yycc.dev/)。
 
-## TODO
-
-- [ ] Router 创建
-- [ ] 母版布局
-
 ## 特性
 
 - Typescript 支持
