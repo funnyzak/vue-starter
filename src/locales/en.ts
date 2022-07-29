@@ -127,6 +127,11 @@ export default {
     hasPermission: `Please set the operation permission label value`,
     hasRole: `Please set the role permission tag value`
   },
+  router: {
+    login: 'Login',
+    userMessage: 'User Message',
+    home: 'Home'
+  },
   sys: {
     api: {
       operationFailed: 'Operation failed',

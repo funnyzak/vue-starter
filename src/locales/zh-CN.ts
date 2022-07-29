@@ -127,7 +127,11 @@ export default {
     hasPermission: `请设置操作权限标签值`,
     hasRole: `请设置角色权限标签值`
   },
-
+  router: {
+    login: '登录',
+    userMessage: '用户消息',
+    home: '首页'
+  },
   sys: {
     api: {
       operationFailed: '操作失败',
