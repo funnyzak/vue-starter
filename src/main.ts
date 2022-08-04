@@ -32,11 +32,11 @@ const setupAll = async () => {
 
   await setupI18n(app);
 
-  setupAuth(app);
+  setupStore(app);
 
   setupRouter(app);
 
-  setupStore(app);
+  setupAuth(app);
 
   app.mount('#app');
 };

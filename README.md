@@ -18,7 +18,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 
 ## TODO
 
-- [ ] 页面缓存 tagview
+- [ ] 页面缓存 cacheview
 
 ## 特性
 
