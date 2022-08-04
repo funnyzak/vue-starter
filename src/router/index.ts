@@ -1,13 +1,13 @@
-import type { App } from 'vue';
-import { getAccessToken, getPermissionList } from '@/utils/auth';
-import type { RouteRecordRaw } from 'vue-router';
-import remainingRouter from './remaining';
-import { useTitle } from '@/hooks/web/useTitle';
 import { useNProgress } from '@/hooks/web/useNProgress';
 import { usePageLoading } from '@/hooks/web/usePageLoading';
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { useTitle } from '@/hooks/web/useTitle';
+// import { useCacheViewStore } from '@/store/modules/cacheView';
 import { usePermissionStoreWithOut } from '@/store/modules/permission';
+import { getAccessToken, getPermissionList } from '@/utils/auth';
+import { App } from 'vue';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import { allModulesRoutes } from './modules';
+import remainingRouter from './remaining';
 
 const permissionStore = usePermissionStoreWithOut();
 
@@ -52,6 +52,7 @@ router.beforeEach(async (to, from, next) => {
       const redirect = decodeURIComponent(redirectPath as string);
       const nextData = to.path === redirect ? { ...to, replace: true } : { path: redirect };
       permissionStore.setIsAddRouters(true);
+
       next(nextData);
     }
   } else {
