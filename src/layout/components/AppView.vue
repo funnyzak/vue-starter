@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useTagsViewStore } from '@/store/modules/tagsView';
+import { useCacheViewStore } from '@/store/modules/cacheView';
 import { computed } from 'vue';
 
-const tagsViewStore = useTagsViewStore();
+const tagsViewStore = useCacheViewStore();
 
 const getCaches = computed((): string[] => {
   return tagsViewStore.getCachedViews;

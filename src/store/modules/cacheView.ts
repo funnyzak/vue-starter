@@ -5,14 +5,14 @@ import { defineStore } from 'pinia';
 import { store } from '../index';
 import { findIndex } from '@/utils';
 
-export interface TagsViewState {
+export interface CacheViewState {
   visitedViews: RouteLocationNormalizedLoaded[];
   cachedViews: Set<string>;
 }
 
-export const useTagsViewStore = defineStore({
-  id: 'tagsView',
-  state: (): TagsViewState => ({
+export const useCacheViewStore = defineStore({
+  id: 'cacheView',
+  state: (): CacheViewState => ({
     visitedViews: [],
     cachedViews: new Set()
   }),
@@ -25,15 +25,14 @@ export const useTagsViewStore = defineStore({
     }
   },
   actions: {
-    // 新增缓存和tag
+    // 新增缓存和访问记录
     addView(view: RouteLocationNormalizedLoaded): void {
       this.addVisitedView(view);
       this.addCachedView();
     },
-    // 新增tag
+    // 新增View缓存
     addVisitedView(view: RouteLocationNormalizedLoaded) {
       if (this.visitedViews.some((v) => v.path === view.path)) return;
-      if (view.meta?.noTagsView) return;
       this.visitedViews.push(
         Object.assign({}, view, {
           title: view.meta?.title || 'no-name'
@@ -61,7 +60,7 @@ export const useTagsViewStore = defineStore({
       this.delVisitedView(view);
       this.addCachedView();
     },
-    // 删除tag
+    // 删除View缓存
     delVisitedView(view: RouteLocationNormalizedLoaded) {
       for (const [i, v] of this.visitedViews.entries()) {
         if (v.path === view.path) {
@@ -78,14 +77,13 @@ export const useTagsViewStore = defineStore({
         this.cachedViews.delete(this.getCachedViews[index]);
       }
     },
-    // 删除所有缓存和tag
+    // 删除所有缓存和View缓存
     delAllViews() {
       this.delAllVisitedViews();
       this.addCachedView();
     },
-    // 删除所有tag
+    // 删除所有View缓存
     delAllVisitedViews() {
-      // const affixTags = this.visitedViews.filter((tag) => tag.meta.affix)
       this.visitedViews = [];
     },
     // 删除其他
@@ -93,7 +91,7 @@ export const useTagsViewStore = defineStore({
       this.delOthersVisitedViews(view);
       this.addCachedView();
     },
-    // 删除其他tag
+    // 删除其他view缓存
     delOthersVisitedViews(view: RouteLocationNormalizedLoaded) {
       this.visitedViews = this.visitedViews.filter((v) => {
         return v?.meta?.affix || v.path === view.path;
@@ -136,6 +134,6 @@ export const useTagsViewStore = defineStore({
   }
 });
 
-export const useTagsViewStoreWithOut = () => {
-  return useTagsViewStore(store);
+export const useCacheViewStoreWithOut = () => {
+  return useCacheViewStore(store);
 };
