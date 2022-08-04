@@ -148,7 +148,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         symbolId: 'icon-[dir]-[name]',
         svgoOptions: true
       })
-    ]
+    ],
+    optimizeDeps: {
+      include: ['vue', 'vue-router', 'vue-types', '@vueuse/core', 'axios', 'qs', 'intro.js']
+    }
   };
 
   if (command === 'serve') {
