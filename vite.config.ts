@@ -6,6 +6,7 @@ import legacy from '@vitejs/plugin-legacy';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
 import DefineOptions from 'unplugin-vue-define-options/vite';
+import viteCompression from 'vite-plugin-compression';
 import WindiCSS from 'vite-plugin-windicss';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 
@@ -32,7 +33,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   env = loadEnv(mode, rootPath, '');
 
   // console.log(command, mode, JSON.stringify(env), ssrBuild);
-  console.log(env);
+  // console.log(env);
 
   const viteConfig = {
     // 项目根目录（index.html 文件所在的位置）。可以是一个绝对路径，或者一个相对于该配置文件本身的相对路径。
@@ -142,6 +143,14 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       WindiCSS(),
       VueJsx(),
       DefineOptions(),
+      viteCompression({
+        verbose: true, // 是否在控制台输出压缩结果
+        disable: true, // 是否禁用
+        threshold: 10240, // 体积大于 threshold 才会被压缩,单位 b
+        algorithm: 'gzip', // 压缩算法,可选 [ 'gzip' , 'brotliCompress' ,'deflate' , 'deflateRaw']
+        ext: '.gz', // 生成的压缩包后缀
+        deleteOriginFile: false //压缩后是否删除源文件
+      }),
       legacy({
         polyfills: true,
         targets: ['defaults', 'not IE 11']
