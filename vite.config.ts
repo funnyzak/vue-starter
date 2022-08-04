@@ -41,6 +41,14 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     base: './',
     // 作为静态资源服务的文件夹。该目录中的文件在开发期间在 / 处提供，并在构建期间复制到 outDir 的根目录，并且始终按原样提供或复制而无需进行转换。该值可以是文件系统的绝对路径，也可以是相对于项目的根目录的相对路径。
     publicDir: 'public',
+    css: {
+      preprocessorOptions: {
+        less: {
+          additionalData: '@import "./src/styles/variables.module.less";',
+          javascriptEnabled: true
+        }
+      }
+    },
     resolve: {
       // 导入时想要省略的扩展名列表。注意，不 建议忽略自定义导入类型的扩展名（例如：.vue），因为它会影响 IDE 和类型支持。
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css'],
