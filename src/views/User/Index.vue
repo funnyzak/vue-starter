@@ -3,8 +3,10 @@ import { useRouter } from 'vue-router';
 import { useI18n } from '@/hooks/web/useI18n';
 import { clearAuth } from '@/utils/auth';
 import { resetRouterLeaveRemain } from '@/router';
+import { useUserStore } from '@/store/modules/user';
 const { t } = useI18n();
 
+const userStore = useUserStore();
 const { push } = useRouter();
 </script>
 <template>
@@ -39,6 +41,7 @@ const { push } = useRouter();
         () => {
           clearAuth();
           resetRouterLeaveRemain();
+          userStore.resetState();
           push({ name: 'HomeIndex' });
         }
       "
