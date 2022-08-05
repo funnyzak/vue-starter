@@ -53,7 +53,7 @@ const handleLogin = async () => {
   permissionStore.setIsAddRouters(true);
 
   // 跳转到授权页
-  push({ name: 'UserMessage' });
+  push({ name: 'UserHome' });
 };
 
 watch(
