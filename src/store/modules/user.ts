@@ -1,18 +1,6 @@
-import { useCache } from '@/hooks/web/useCache';
+import { UserInfoVO } from '@/api/login/types';
 import { defineStore } from 'pinia';
 import { store } from '../index';
-
-const { wsCache } = useCache();
-
-interface UserInfoVO {
-  permissions: string[];
-  roles: string[];
-  user: {
-    avatar?: string;
-    id: number;
-    nickname: string;
-  };
-}
 
 export const useUserStore = defineStore({
   id: 'user',
@@ -29,7 +17,7 @@ export const useUserStore = defineStore({
     enabled: true
   },
   getters: {
-    getUserInfo() {
+    getUserInfo(): UserInfoVO {
       return this;
     }
   },
@@ -40,8 +28,6 @@ export const useUserStore = defineStore({
       this.permissions = userInfo.permissions;
       this.roles = userInfo.roles;
       this.user = userInfo.user;
-
-      wsCache.set('user', userInfo);
     },
     resetState() {
       this.permissions = [];

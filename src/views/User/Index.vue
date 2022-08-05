@@ -21,6 +21,14 @@ const { push } = useRouter();
     <button
       @click="
         () => {
+          push({ name: 'UserPost2' });
+        }
+      "
+      >文章2</button
+    >
+    <button
+      @click="
+        () => {
           push({ name: 'HomeIndex' });
         }
       "

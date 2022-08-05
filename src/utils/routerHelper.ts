@@ -1,6 +1,5 @@
 import { isString, isUrl } from '@/utils/is';
-import type { RouteLocationNormalized, RouteMeta, RouteRecordNormalized } from 'vue-router';
-import checkPermission from './permission';
+import type { RouteLocationNormalized, RouteRecordNormalized } from 'vue-router';
 
 const modules = import.meta.glob('../views/**/*.{vue,tsx}');
 
@@ -55,11 +54,6 @@ export const generateRoutes = (
   const modulesRoutesKeys = Object.keys(modules);
 
   for (const route of routes) {
-    // 如果没有权限则忽略此路由
-    if (!checkPermission((route.meta as RouteMeta)?.permissions, userPermissions)) {
-      continue;
-    }
-
     // 路由地址转首字母大写驼峰，作为路由名称，适配keepAlive
     let data: AppRouteRecordRaw = {
       ...route,

@@ -1,11 +1,11 @@
 import { useNProgress } from '@/hooks/web/useNProgress';
 import { usePageLoading } from '@/hooks/web/usePageLoading';
 import { useTitle } from '@/hooks/web/useTitle';
-// import { useCacheViewStore } from '@/store/modules/cacheView';
 import { usePermissionStoreWithOut } from '@/store/modules/permission';
 import { getAccessToken, getPermissionList } from '@/utils/auth';
+import checkPermission from '@/utils/permission';
 import { App } from 'vue';
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHashHistory, RouteMeta, RouteRecordRaw } from 'vue-router';
 import { allModulesRoutes } from './modules';
 import remainingRouter from './remaining';
 
@@ -39,6 +39,11 @@ router.beforeEach(async (to, from, next) => {
       next({ path: '/' });
     } else {
       if (permissionStore.getIsAddRouters) {
+        if (!checkPermission((to.meta as RouteMeta)?.permissions)) {
+          next(`/403`);
+          return;
+        }
+
         next();
         return;
       }

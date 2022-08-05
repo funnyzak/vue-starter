@@ -130,6 +130,7 @@ export default {
   router: {
     login: '登录',
     userMessage: '用户消息',
+    userPost: '文章',
     home: '首页',
     post: '文章'
   },

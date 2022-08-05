@@ -5,6 +5,8 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 import { computed } from 'vue';
 import { useLocaleStoreWithOut } from '@/store/modules/locale';
+import { useUserStore } from '@/store/modules/user';
+
 import { useAppStore } from '@/store/modules/app';
 import { useLocale, useI18n } from '@/hooks';
 import { useMouse, useCounter } from '@vueuse/core';
@@ -15,11 +17,13 @@ const { x, y } = useMouse();
 const { count, inc, dec } = useCounter();
 
 const appStore = useAppStore();
+const userStore = useUserStore();
 const localeStore = useLocaleStoreWithOut();
 const { t } = useI18n();
 const { changeLocale } = useLocale();
 
 const appName = computed(() => appStore.getAppName);
+const userInfo = computed(() => userStore.getUserInfo);
 </script>
 
 <template>
@@ -52,7 +56,11 @@ const appName = computed(() => appStore.getAppName);
       <a @click="inc()" style="margin-right: 10px">+</a>
       <a @click="dec()">-</a>
     </div>
-    <div> 权限例子：<router-link to="/user/home">进入用户中心</router-link> </div>
+    <div>
+      权限例子：<router-link :to="{ path: '/user/home' }"
+        >进入用户中心 {{ userInfo.user.nickname }}</router-link
+      >
+    </div>
   </div>
   <div class="text-center mt-10 space-y-4">
     <HelloWorld :msg="appName" />

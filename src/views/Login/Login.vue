@@ -3,7 +3,7 @@ import { useI18n } from '@/hooks/web/useI18n';
 import { useAppStore } from '@/store/modules/app';
 import { usePermissionStore } from '@/store/modules/permission';
 import { useUserStore } from '@/store/modules/user';
-import { setToken } from '@/utils/auth';
+import { setToken, setUser } from '@/utils/auth';
 import { ref, watch } from 'vue';
 import type { RouteLocationNormalizedLoaded, RouteRecordRaw } from 'vue-router';
 import { useRouter } from 'vue-router';
@@ -39,6 +39,7 @@ const userInfo = {
 // 登录
 const handleLogin = async () => {
   userStore.setUserInfo(userInfo);
+  setUser(userInfo);
 
   // 设置登陆token
   setToken(userToken);

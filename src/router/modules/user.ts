@@ -14,7 +14,7 @@ const userRouter: AppRouteRecordRaw[] = [
       {
         path: 'home',
         component: () => import('@/views/User/Index.vue'),
-        name: 'UserMessage',
+        name: 'UserHome',
         meta: {
           noCache: false,
           title: t('router.userMessage'),
@@ -28,8 +28,19 @@ const userRouter: AppRouteRecordRaw[] = [
         keepAlive: true,
         meta: {
           noCache: false,
-          title: t('router.userMessage'),
+          title: t('router.userPost'),
           permissions: { list: ['user.home'] }
+        }
+      },
+      {
+        path: 'post2',
+        component: () => import('@/views/User/Post.vue'),
+        name: 'UserPost2',
+        keepAlive: true,
+        meta: {
+          noCache: false,
+          title: t('router.userPost'),
+          permissions: { list: ['user.post'] }
         }
       }
     ]

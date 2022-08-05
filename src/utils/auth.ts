@@ -1,22 +1,33 @@
 import { useCache } from '@/hooks/web/useCache';
-import { TokenType } from '@/api/login/types';
+import { TokenType, UserInfoVO } from '@/api/login/types';
 import { decrypt, encrypt } from '@/utils/jsencrypt';
 
-const { wsCache } = useCache();
+const { wsCache } = useCache('localStorage');
+
 const AccessTokenKey = 'ACCESS_TOKEN';
 const RefreshTokenKey = 'REFRESH_TOKEN';
+const UserKey = 'USER_KEY';
 
 export const clearAuth = () => {
   removeToken();
-  wsCache.delete('user');
+  wsCache.delete(UserKey);
+};
+
+export const setUser = (user: UserInfoVO) => {
+  wsCache.set(UserKey, user);
+};
+
+export const getUser = (): UserInfoVO | undefined => {
+  const _cacheUser = wsCache.get(UserKey);
+  return _cacheUser && _cacheUser !== null ? (_cacheUser as UserInfoVO) : undefined;
 };
 
 export const getPermissionList = () => {
-  return wsCache.get('user') &&
-    wsCache.get('user') !== null &&
-    wsCache.get('user').permissions &&
-    wsCache.get('user').permissions !== null
-    ? (wsCache.get('user')?.permissions as string[])
+  return wsCache.get(UserKey) &&
+    wsCache.get(UserKey) !== null &&
+    wsCache.get(UserKey).permissions &&
+    wsCache.get(UserKey).permissions !== null
+    ? (wsCache.get(UserKey)?.permissions as string[])
     : [];
 };
 

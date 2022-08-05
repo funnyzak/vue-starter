@@ -130,6 +130,7 @@ export default {
   router: {
     login: 'Login',
     userMessage: 'User Message',
+    userPost: 'User Post',
     home: 'Home',
     post: 'Post'
   },
