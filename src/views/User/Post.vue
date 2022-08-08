@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-import { useI18n } from '@/hooks/web/useI18n';
 import { getPosts } from '@/api/demo';
 import { PostVO } from '@/api/demo/types';
-import { ref } from 'vue';
+import { useI18n } from '@/hooks/web/useI18n';
+import { useCacheViewStore } from '@/store/modules/cacheView';
+import { onBeforeMount, ref, unref } from 'vue';
+import { useRouter } from 'vue-router';
 const { t } = useI18n();
 
+const cacheViewStore = useCacheViewStore();
 const { back } = useRouter();
 let postList = ref<PostVO[]>([]);
 
@@ -14,6 +16,16 @@ function loadPosts() {
     postList.value = res;
   });
 }
+
+const { currentRoute } = useRouter();
+
+onBeforeMount(() => {
+  const { name, meta } = unref(currentRoute);
+  if (name && !meta.noCache) {
+    cacheViewStore.addView(unref(currentRoute));
+  }
+  loadPosts();
+});
 </script>
 <template>
   <section class="mt-10 text-center space-y-2 space-x-2 flex-col">
@@ -30,6 +42,7 @@ function loadPosts() {
         "
         >清除数据</button
       >
+      <input type="text" />
     </div>
 
     <ul>
