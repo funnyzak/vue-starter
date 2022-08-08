@@ -2,10 +2,10 @@
 import { useCacheViewStore } from '@/store/modules/cacheView';
 import { computed } from 'vue';
 
-const tagsViewStore = useCacheViewStore();
+const cacheViewStore = useCacheViewStore();
 
 const getCaches = computed((): string[] => {
-  return tagsViewStore.getCachedViews;
+  return cacheViewStore.getCachedViews;
 });
 </script>
 
