@@ -2,12 +2,16 @@
 import { getPosts } from '@/api/demo';
 import { PostVO } from '@/api/demo/types';
 import { useI18n } from '@/hooks/web/useI18n';
-import { useCacheViewStore } from '@/store/modules/cacheView';
-import { onBeforeMount, ref, unref } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import { useRouter } from 'vue-router';
 const { t } = useI18n();
 
-const cacheViewStore = useCacheViewStore();
+defineOptions({
+  // 定义组件名称
+  name: 'UserPost',
+  inheritAttrs: false
+});
+
 const { back } = useRouter();
 let postList = ref<PostVO[]>([]);
 
@@ -17,13 +21,7 @@ function loadPosts() {
   });
 }
 
-const { currentRoute } = useRouter();
-
 onBeforeMount(() => {
-  const { name, meta } = unref(currentRoute);
-  if (name && !meta.noCache) {
-    cacheViewStore.addView(unref(currentRoute));
-  }
   loadPosts();
 });
 </script>
