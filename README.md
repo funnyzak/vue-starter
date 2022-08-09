@@ -18,7 +18,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 
 ## TODO
 
-- [ ] 页面缓存 cacheview
+- [ ] 单元测试 demo
 
 ## 特性
 
@@ -37,6 +37,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - 引入 Animite.css
 - 使用 vue-Router
 - 实现了一套根据权限 Code 控制路由的逻辑
+- 使用 keepAlive,实现页面缓存
 - Utils 通用工具函数
 
 ## 使用
