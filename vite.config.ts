@@ -1,4 +1,5 @@
 import { resolve } from 'path';
+import { configDefaults } from 'vitest/config';
 
 import EslintPlugin from 'vite-plugin-eslint';
 
@@ -172,6 +173,15 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     ],
     optimizeDeps: {
       include: ['vue', 'vue-router', 'vue-types', '@vueuse/core', 'axios', 'qs', 'intro.js']
+    },
+    test: {
+      include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+      exclude: [...configDefaults.exclude],
+      global: true,
+      open: true,
+      coverage: {
+        reporter: ['text' as any, 'json' as any, 'html' as any]
+      }
     }
   };
 
