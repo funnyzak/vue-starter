@@ -16,10 +16,6 @@
 
 Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[Online Preview](https://vuestarter2.vercel.app/)。
 
-## TODO
-
-- [ ] 单元测试 demo
-
 ## 特性
 
 - Typescript 支持
@@ -38,6 +34,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - 使用 vue-Router
 - 实现了一套根据权限 Code 控制路由的逻辑
 - 使用 keepAlive,实现页面缓存
+- 使用 Vitest 进行单元测试
 - Utils 通用工具函数
 
 ## 使用
@@ -77,6 +74,11 @@ npm run lint:staged
 
 # 模板新建
 npm run p
+
+# test
+npm run test
+npm run test-ui
+npm run coverage
 
 # 更多请看 package.json
 npm run serve:dev
@@ -159,6 +161,7 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 ## 参考
 
+- [Vitest](https://cn.vitest.dev/guide/features.html)
 - [vite](https://cn.vitejs.dev/guide/features.htm)
 - [vite plugin](https://cn.vitejs.dev/plugins/)
 - [awesome vite plugin](https://github.com/vitejs/awesome-vite#plugins)

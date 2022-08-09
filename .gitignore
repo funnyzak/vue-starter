@@ -24,3 +24,7 @@ dist*
 *.sw?
 
 .eslintcache
+coverage
+
+
+**/*/__snapshots__
