@@ -14,7 +14,7 @@
 [sg-url]: https://sourcegraph.com/github.com/funnyzak/vue-starter
 [sg-image]: https://img.shields.io/badge/view%20on-Sourcegraph-brightgreen.svg?style=flat-square
 
-Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。
+Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[Online Preview](https://vuestarter2.vercel.app/)。
 
 ## TODO
 
