@@ -60,9 +60,6 @@ npm run build
 # Lint 格式化/检查
 npm run lint:eslint
 
-# 运行 jest 测试
-npm run test:unit
-
 # 删除node_modules
 npm run clean
 
