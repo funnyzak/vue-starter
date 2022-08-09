@@ -2,6 +2,7 @@
   "recommendations": [
     "vue.volar",
     "Lokalise.i18n-ally",
+    "ZixuanChen.vitest-explorer",
     "voorjaar.windicss-intellisense",
     "esbenp.prettier-vscode"
   ]
