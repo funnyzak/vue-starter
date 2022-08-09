@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-import { useI18n } from '@/hooks/web/useI18n';
 import { getPosts } from '@/api/demo';
 import { PostVO } from '@/api/demo/types';
-import { ref } from 'vue';
+import { useI18n } from '@/hooks/web/useI18n';
+import { onBeforeMount, ref } from 'vue';
+import { useRouter } from 'vue-router';
 const { t } = useI18n();
+
+defineOptions({
+  // 定义组件名称
+  name: 'UserPost',
+  inheritAttrs: false
+});
 
 const { back } = useRouter();
 let postList = ref<PostVO[]>([]);
@@ -14,6 +20,10 @@ function loadPosts() {
     postList.value = res;
   });
 }
+
+onBeforeMount(() => {
+  loadPosts();
+});
 </script>
 <template>
   <section class="mt-10 text-center space-y-2 space-x-2 flex-col">
@@ -30,6 +40,7 @@ function loadPosts() {
         "
         >清除数据</button
       >
+      <input type="text" />
     </div>
 
     <ul>

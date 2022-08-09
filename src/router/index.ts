@@ -2,14 +2,16 @@ import { useNProgress } from '@/hooks/web/useNProgress';
 import { usePageLoading } from '@/hooks/web/usePageLoading';
 import { useTitle } from '@/hooks/web/useTitle';
 import { usePermissionStoreWithOut } from '@/store/modules/permission';
+import { useCacheViewStoreWithOut } from '@/store/modules/cacheView';
 import { getAccessToken, getPermissionList } from '@/utils/auth';
 import checkPermission from '@/utils/permission';
-import { App } from 'vue';
+import { App, unref } from 'vue';
 import { createRouter, createWebHashHistory, RouteMeta, RouteRecordRaw } from 'vue-router';
 import { allModulesRoutes } from './modules';
 import remainingRouter from './remaining';
 
 const permissionStore = usePermissionStoreWithOut();
+const cacheViewStore = useCacheViewStoreWithOut();
 
 const { start, done } = useNProgress();
 
@@ -42,6 +44,12 @@ router.beforeEach(async (to, from, next) => {
         if (!checkPermission((to.meta as RouteMeta)?.permissions)) {
           next(`/403`);
           return;
+        }
+
+        // 如何设置组件缓存，则加入缓存
+        const { name, keepAlive, meta } = unref(to) as AppRouteRecordRaw;
+        if (name && (keepAlive || !meta.noCache)) {
+          cacheViewStore.addView(unref(to));
         }
 
         next();

@@ -16,6 +16,12 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": [
+      "pinia-plugin-persist",
+      "unplugin-vue-define-options",
+      "vite-plugin-svg-icons/client",
+      "@types/intro.js"
+    ],
     "typeRoots": ["./node_modules/@types/", "./types"],
     "skipLibCheck": true /* Skip type checking of declaration files. */
   },
