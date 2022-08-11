@@ -37,7 +37,7 @@
     "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "lint:staged": "lint-staged",
     "p": "plop",
-    "prepare": "husky install",
+    "prepare": "if [[ $NODE_ENV != \"production\" ]]; then husky install; fi",
     "windicss-analysis": "windicss-analysis",
     "test": "vitest",
     "test-ui": "vitest --ui",
