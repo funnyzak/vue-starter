@@ -28,3 +28,5 @@ coverage
 
 
 **/*/__snapshots__
+
+.env._*
