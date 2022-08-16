@@ -86,6 +86,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         }
       },
       sourcemap: env.VITE_SOURCEMAP === 'true',
+      minify: 'terser',
       terserOptions: {
         compress: {
           drop_debugger: env.VITE_DROP_DEBUGGER === 'true',
