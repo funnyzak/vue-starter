@@ -1,9 +1,11 @@
 {
   "recommendations": [
     "vue.volar",
-    "Lokalise.i18n-ally",
-    "ZixuanChen.vitest-explorer",
+    "lokalise.i18n-ally",
+    "zixuanchen.vitest-explorer",
     "voorjaar.windicss-intellisense",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "vue.vscode-typescript-vue-plugin",
+    "Vue.volar"
   ]
 }
