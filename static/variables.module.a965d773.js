@@ -1,1 +1,1 @@
-const a="yc",e={namespace:a};export{e as v};
+const a={namespace:"yc"};export{a as v};
