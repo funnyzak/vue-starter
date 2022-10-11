@@ -19,6 +19,7 @@ function loadPosts() {
   getPosts().then((res) => {
     postList.value = res;
   });
+  return undefined;
 }
 
 onBeforeMount(() => {
@@ -28,7 +29,16 @@ onBeforeMount(() => {
 <template>
   <section class="mt-10 text-center space-y-2 space-x-2 flex-col">
     <div class="mx-auto"
-      >这是文章中心。 <button @click="back">{{ t('common.back') }}</button>
+      >这是文章中心。
+      <button
+        @click="
+          () => {
+            back();
+            return undefined;
+          }
+        "
+        >{{ t('common.back') }}</button
+      >
     </div>
     <div class="flex-row space-x-5">
       <button @click="loadPosts">加载数据</button>
@@ -36,6 +46,7 @@ onBeforeMount(() => {
         @click="
           () => {
             postList = [];
+            return undefined;
           }
         "
         >清除数据</button

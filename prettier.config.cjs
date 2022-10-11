@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 100, //单行长度
+  printWidth: 120, //单行长度
   tabWidth: 2, //缩进长度
   useTabs: false,
   semi: true, //句末使用分号

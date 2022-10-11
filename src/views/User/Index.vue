@@ -16,6 +16,7 @@ const { push } = useRouter();
       @click="
         () => {
           push({ name: 'UserPost' });
+          return undefined;
         }
       "
       >{{ t('router.post') }}</button
@@ -24,6 +25,7 @@ const { push } = useRouter();
       @click="
         () => {
           push({ name: 'UserPost2' });
+          return undefined;
         }
       "
       >文章2</button
@@ -32,6 +34,7 @@ const { push } = useRouter();
       @click="
         () => {
           push({ name: 'HomeIndex' });
+          return undefined;
         }
       "
       >{{ t('common.back') }}</button
@@ -43,6 +46,7 @@ const { push } = useRouter();
           resetRouterLeaveRemain();
           userStore.resetState();
           push({ name: 'HomeIndex' });
+          return undefined;
         }
       "
       >{{ t('common.logout') }}</button

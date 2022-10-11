@@ -16,9 +16,7 @@ const renderLayout = () => {
 export default defineComponent({
   name: 'Layout',
   setup() {
-    return () => (
-      <section class={[prefixCls, 'w-[100%] h-[100%] relative']}>{renderLayout()}</section>
-    );
+    return () => <section class={[prefixCls, 'w-[100%] h-[100%] relative']}>{renderLayout()}</section>;
   }
 });
 </script>

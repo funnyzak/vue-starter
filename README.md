@@ -39,51 +39,51 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 
 ## 使用
 
-使用的 Node 的构建版本为 **v16.16.0**，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
+使用的 Node 的构建版本为 `Node 16`，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
 
 ```bash
 # 切换node版本
 nvm use 16.16.0
 
 # 安装依赖
-npm ci
+yarn
 
 # 默认启动（所有）
-npm run dev
+yarn dev
 
 # 预览
-npm run preview
+yarn preview
 
 # 全部构建（所有）
-npm run build
+yarn build
 
 # Lint 格式化/检查
-npm run lint:eslint
+yarn lint:eslint
 
 # 删除node_modules
-npm run clean
+yarn clean
 
 # 代码格式化
-npm run lint:format
+yarn lint:format
 
 # lint staged
-npm run lint:staged
+yarn lint:staged
 
 # 模板新建
-npm run p
+yarn p
 
 # test
-npm run test
-npm run test-ui
-npm run coverage
+yarn test
+yarn test-ui
+yarn coverage
 
 # 更多请看 package.json
-npm run serve:dev
-npm run serve:prod
-npm run serve:test
+yarn serve:dev
+yarn serve:prod
+yarn serve:test
 
 # windicss-analysis
-npm run windicss-analysis
+yarn windicss-analysis
 ```
 
 ## 目录

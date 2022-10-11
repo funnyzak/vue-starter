@@ -46,10 +46,7 @@ export const getRawRoute = (route: RouteLocationNormalized): RouteLocationNormal
 };
 
 // 路由生成
-export const generateRoutes = (
-  routes: AppRouteRecordRaw[],
-  userPermissions?: string[]
-): AppRouteRecordRaw[] => {
+export const generateRoutes = (routes: AppRouteRecordRaw[], userPermissions?: string[]): AppRouteRecordRaw[] => {
   const res: AppRouteRecordRaw[] = [];
   const modulesRoutesKeys = Object.keys(modules);
 

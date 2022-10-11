@@ -5,10 +5,7 @@ import { getPermissionList } from './auth';
  * @param permissionValue 要判断的功能权限
  * @param userPermissions 所拥有的功能权限
  */
-export default function checkPermission(
-  permissionValue?: PermissionLogic,
-  permissionList?: string[]
-) {
+export default function checkPermission(permissionValue?: PermissionLogic, permissionList?: string[]) {
   /**
    * 不需要权限
    */
