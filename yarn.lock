@@ -4630,6 +4630,13 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
+strip-literal@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/strip-literal/-/strip-literal-0.4.2.tgz#4f9fa6c38bb157b924e9ace7155ebf8a2342cbcf"
+  integrity sha512-pv48ybn4iE1O9RLgCAN0iU4Xv7RlBTiit6DKmMiErbs9x1wH6vXBs45tWc0H5wUIF6TLTrKweqkmYF/iraQKNw==
+  dependencies:
+    acorn "^8.8.0"
+
 stylus@^0.58.1:
   version "0.58.1"
   resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.58.1.tgz#7e425bb493c10dde94cf427a138d3eae875a3b44"
@@ -4743,12 +4750,17 @@ through@^2.3.6, through@^2.3.8:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==
 
-tinypool@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.2.4.tgz#4d2598c4689d1a2ce267ddf3360a9c6b3925a20c"
-  integrity sha512-Vs3rhkUH6Qq1t5bqtb816oT+HeJTXfwt2cbPH17sWHIYKTotQIFPk3tf2fgqRrVyMDVOc1EnPgzIxfIulXVzwQ==
+tinybench@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tinybench/-/tinybench-2.3.0.tgz#febb2e697c735c0cdb8eb1e43cb1d2fa1821f983"
+  integrity sha512-zs1gMVBwyyG2QbVchYIbnabRhMOCGvrwZz/q+SV+LIMa9q5YDQZi2kkI6ZRqV2Bz7ba1uvrc7ieUoE4KWnGeKg==
 
-tinyspy@^1.0.0:
+tinypool@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.3.0.tgz#c405d8b743509fc28ea4ca358433190be654f819"
+  integrity sha512-NX5KeqHOBZU6Bc0xj9Vr5Szbb1j8tUHIeD18s41aDJaPeC5QTdEhK0SpdpUrZlj2nv5cctNcSjaKNanXlfcVEQ==
+
+tinyspy@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/tinyspy/-/tinyspy-1.0.2.tgz#6da0b3918bfd56170fb3cd3a2b5ef832ee1dff0d"
   integrity sha512-bSGlgwLBYf7PnUsQ6WOc6SJ3pGOcd+d8AA6EUnLDDM0kWEstC1JIlSZA3UNliDXhd9ABoS7hiRBDCu+XP/sf1Q==
@@ -5030,7 +5042,7 @@ vite-plugin-windicss@^1.8.7:
     kolorist "^1.5.1"
     windicss "^3.5.6"
 
-"vite@^2.9.12 || ^3.0.0-0", vite@^3.0.3:
+vite@^3.0.0, vite@^3.0.3:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.1.7.tgz#9fc2b57a395f79175d38fa3cffd15080b0d9cbfc"
   integrity sha512-5vCAmU4S8lyVdFCInu9M54f/g8qbOMakVw5xJ4pjoaDy5wgy9sLLZkGdSLN52dlsBqh0tBqxjaqqa8LgPqwRAA==
@@ -5042,10 +5054,10 @@ vite-plugin-windicss@^1.8.7:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@^0.21.0:
-  version "0.21.1"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.21.1.tgz#b4f5b901c9a23a3aaec76d3404f3072821d93d00"
-  integrity sha512-WBIxuFmIDPuK47GO6Lu9eNeRMqHj/FWL3dk73OHH3eyPPWPiu+UB3QHLkLK2PEggCqJW4FaWoWg8R68S7p9+9Q==
+vitest@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.24.1.tgz#4b4ceb3d9c6710e8fb7a3b936b740f9c9f9cde10"
+  integrity sha512-NKkK1xnDIOOr42pKBfGQQl6b6IWdFVBpG6ZS1T+nUlJuqcOiZ7lxjVwHy9wrtTYpJ0BWww9y6bSGYXubD29Nag==
   dependencies:
     "@types/chai" "^4.3.3"
     "@types/chai-subset" "^1.3.3"
@@ -5053,9 +5065,11 @@ vitest@^0.21.0:
     chai "^4.3.6"
     debug "^4.3.4"
     local-pkg "^0.4.2"
-    tinypool "^0.2.4"
-    tinyspy "^1.0.0"
-    vite "^2.9.12 || ^3.0.0-0"
+    strip-literal "^0.4.2"
+    tinybench "^2.3.0"
+    tinypool "^0.3.0"
+    tinyspy "^1.0.2"
+    vite "^3.0.0"
 
 vue-demi@*:
   version "0.13.11"
