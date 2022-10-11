@@ -5,7 +5,7 @@ import EslintPlugin from 'vite-plugin-eslint';
 
 import legacy from '@vitejs/plugin-legacy';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
-import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
+import vueI18n from '@intlify/vite-plugin-vue-i18n';
 import DefineOptions from 'unplugin-vue-define-options/vite';
 import viteCompression from 'vite-plugin-compression';
 import WindiCSS from 'vite-plugin-windicss';
