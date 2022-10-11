@@ -37,23 +37,25 @@ const userInfo = {
 };
 
 // 登录
-const handleLogin = async () => {
+const handleLogin = () => {
   userStore.setUserInfo(userInfo);
   setUser(userInfo);
 
   // 设置登陆token
   setToken(userToken);
 
-  await permissionStore.generateRoutes(userInfo.permissions);
+  permissionStore.generateRoutes(userInfo.permissions).then(() => {
+    permissionStore.getAddRouters.forEach((route) => {
+      addRoute(route as RouteRecordRaw); // 动态添加可访问路由表
+    });
 
-  permissionStore.getAddRouters.forEach((route) => {
-    addRoute(route as RouteRecordRaw); // 动态添加可访问路由表
+    permissionStore.setIsAddRouters(true);
+
+    // 跳转到授权页
+    push({ name: 'UserHome' });
   });
 
-  permissionStore.setIsAddRouters(true);
-
-  // 跳转到授权页
-  push({ name: 'UserHome' });
+  return undefined;
 };
 
 watch(
@@ -73,6 +75,15 @@ watch(
     <button class="btn" @click="handleLogin">{{ t('common.login') }}</button
     >？
 
-    <button class="btn" @click="back">{{ t('common.back') }}</button>
+    <button
+      class="btn"
+      @click="
+        () => {
+          back();
+          return undefined;
+        }
+      "
+      >{{ t('common.back') }}</button
+    >
   </div>
 </template>

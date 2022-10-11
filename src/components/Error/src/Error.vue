@@ -34,7 +34,7 @@ const errorMap: {
 };
 
 const props = defineProps({
-  type: propTypes.string.validate((v: string) => ['404', '500', '403'].includes(v)).def('404')
+  type: propTypes.string.validate((_v: string) => ['404', '500', '403'].includes(_v)).def('404')
 });
 
 const emit = defineEmits(['errorClick']);
@@ -50,7 +50,15 @@ const btnClick = () => {
       <img width="350" :src="errorMap[type].url" alt="" />
       <div class="text-14px">{{ errorMap[type].message }}</div>
       <div class="mt-20px">
-        <button @click="btnClick">{{ errorMap[type].buttonText }}</button>
+        <button
+          @click="
+            () => {
+              btnClick();
+              return undefined;
+            }
+          "
+          >{{ errorMap[type].buttonText }}</button
+        >
       </div>
     </div>
   </div>

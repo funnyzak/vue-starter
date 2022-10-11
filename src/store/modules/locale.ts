@@ -17,9 +17,7 @@ export const useLocaleStore = defineStore({
       return this.localeMaps;
     },
     getCurrentLocale(): LocaleMap {
-      return (
-        this.localeMaps.find((item) => item.lang === this.currentLocale.lang) || this.localeMaps[0]
-      );
+      return this.localeMaps.find((item) => item.lang === this.currentLocale.lang) || this.localeMaps[0];
     }
   },
   actions: {

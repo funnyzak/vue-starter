@@ -37,7 +37,12 @@ const userInfo = computed(() => userStore.getUserInfo);
           color: localeStore.getCurrentLocale.lang === localMap.lang ? 'blue' : 'black'
         }"
         class="pr-2"
-        @click="changeLocale(localMap.lang)"
+        @click="
+          () => {
+            changeLocale(localMap.lang);
+            return undefined;
+          }
+        "
       >
         {{ localMap.name }}
       </dd>
@@ -53,13 +58,28 @@ const userInfo = computed(() => userStore.getUserInfo);
     <div class="text-center">Mouse: {{ x }} x {{ y }}</div>
     <div class="border-blue-200">
       Counter: {{ count }}
-      <a @click="inc()" style="margin-right: 10px">+</a>
-      <a @click="dec()">-</a>
+      <a
+        @click="
+          () => {
+            inc();
+            return undefined;
+          }
+        "
+        style="margin-right: 10px"
+        >+</a
+      >
+      <a
+        @click="
+          () => {
+            dec();
+            return undefined;
+          }
+        "
+        >-</a
+      >
     </div>
     <div>
-      权限例子：<router-link :to="{ path: '/user/home' }"
-        >进入用户中心 {{ userInfo.user.nickname }}</router-link
-      >
+      权限例子：<router-link :to="{ path: '/user/home' }">进入用户中心 {{ userInfo.user.nickname }}</router-link>
     </div>
   </div>
   <div class="text-center mt-10 space-y-4">
