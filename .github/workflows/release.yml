@@ -38,7 +38,7 @@ jobs:
         run: yarn
       - name: Lint and Test
         run: |
-          yarn ts:check
+          yarn eslint:check
           yarn test
   release:
     name: Release
