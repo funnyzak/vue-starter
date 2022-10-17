@@ -99,7 +99,7 @@
     "vite-plugin-eslint": "^1.7.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-windicss": "^1.8.7",
-    "vitest": "^0.24.1",
+    "vitest": "^0.24.3",
     "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "^1.0.7",
     "windicss": "^3.5.6",
