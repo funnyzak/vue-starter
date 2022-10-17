@@ -764,10 +764,10 @@
     "@volar/typescript" "1.0.7"
     "@volar/vue-language-core" "1.0.7"
 
-"@vue-macros/common@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-0.12.0.tgz#e2dcabf701bd2bfc03596c65f92b01c2a5c19e18"
-  integrity sha512-KIUjO3w2RfN/cTsESEK1SqkHlwAoKT4EOFZJOPiy01NTYJxm5IuDvq0PeTI/fwwOXFMX2sPpqXvVwekMEoTF/A==
+"@vue-macros/common@~0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-0.12.1.tgz#50c9d7c7de9659b19ad249e31ec74b2fcdf77c9c"
+  integrity sha512-JIiH8wpZulSDX+nDVXbhUwnzM2y56Druh+0CRSWofWDM6kvQnyTAGlEDeh9q2T6dyU4IYv0julS2wPrImljQhg==
   dependencies:
     "@babel/types" "^7.19.3"
     "@vue/compiler-sfc" "^3.2.40"
@@ -4928,13 +4928,13 @@ unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==
 
-unplugin-vue-define-options@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.12.0.tgz#94a16831a1c694462a0fbd465523e8e99b6b7356"
-  integrity sha512-0127069xNq+QWpE3bCYZIJXpYEgE8FTPXWsACNSkVEIdM6ItVATsBqAZzGiG185NLlWUktc8li9WI8fpCGfW5Q==
+unplugin-vue-define-options@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.12.1.tgz#c5c3c99051d70dde9c2775f01620fd2ee4329aa2"
+  integrity sha512-4chJj642fN87JYVjwXZEV5Ye7Z7qDE+hlFyLnqIwSO8t8PfTFo4Hk6HvCtPdqq5chzVU6rrVMWjIR6AD0i/BYw==
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
-    "@vue-macros/common" "0.12.0"
+    "@vue-macros/common" "~0.12.1"
     ast-walker-scope "^0.2.3"
     unplugin "^0.9.6"
 
