@@ -764,14 +764,14 @@
     "@volar/typescript" "1.0.8"
     "@volar/vue-language-core" "1.0.8"
 
-"@vue-macros/common@~0.12.1":
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-0.12.1.tgz#50c9d7c7de9659b19ad249e31ec74b2fcdf77c9c"
-  integrity sha512-JIiH8wpZulSDX+nDVXbhUwnzM2y56Druh+0CRSWofWDM6kvQnyTAGlEDeh9q2T6dyU4IYv0julS2wPrImljQhg==
+"@vue-macros/common@~0.12.2":
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-0.12.2.tgz#84b59ba7d89f215906fc0039a281a04d8a0a78e4"
+  integrity sha512-IxLvuJ2/ixGxNJJAg3kHi2KOHgEpSvEXSGstimp3tB/3eDGM9nvyAqgdWjFyFxKxg0LgyRmvaS4+iaq+c4FoPw==
   dependencies:
-    "@babel/types" "^7.19.3"
-    "@vue/compiler-sfc" "^3.2.40"
-    magic-string "^0.26.5"
+    "@babel/types" "^7.19.4"
+    "@vue/compiler-sfc" "^3.2.41"
+    magic-string "^0.26.7"
 
 "@vue/babel-helper-vue-transform-on@^1.0.2":
   version "1.0.2"
@@ -811,7 +811,7 @@
     "@vue/compiler-core" "3.2.41"
     "@vue/shared" "3.2.41"
 
-"@vue/compiler-sfc@3.2.41", "@vue/compiler-sfc@^3.2.40":
+"@vue/compiler-sfc@3.2.41", "@vue/compiler-sfc@^3.2.40", "@vue/compiler-sfc@^3.2.41":
   version "3.2.41"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.2.41.tgz#238fb8c48318408c856748f4116aff8cc1dc2a73"
   integrity sha512-+1P2m5kxOeaxVmJNXnBskAn3BenbTmbxBxWOtBq3mQTCokIreuMULFantBUclP0+KnzNCMOvcnKinqQZmiOF8w==
@@ -3443,7 +3443,7 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-magic-string@^0.26.2, magic-string@^0.26.3, magic-string@^0.26.5:
+magic-string@^0.26.2, magic-string@^0.26.3, magic-string@^0.26.7:
   version "0.26.7"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.26.7.tgz#caf7daf61b34e9982f8228c4527474dac8981d6f"
   integrity sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==
@@ -4928,13 +4928,13 @@ unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==
 
-unplugin-vue-define-options@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.12.1.tgz#c5c3c99051d70dde9c2775f01620fd2ee4329aa2"
-  integrity sha512-4chJj642fN87JYVjwXZEV5Ye7Z7qDE+hlFyLnqIwSO8t8PfTFo4Hk6HvCtPdqq5chzVU6rrVMWjIR6AD0i/BYw==
+unplugin-vue-define-options@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.12.2.tgz#f692c1e225e7234d4765dc3b66a1465f0ba19760"
+  integrity sha512-RQd+JWKx7Z1kKVq5X+K8yBv5h1Of//R6DHY0kF2cF9NPgTxu5u1pfaL24Dup0mQ+5ulrPaiEXti5G/bWMMg+Ig==
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
-    "@vue-macros/common" "~0.12.1"
+    "@vue-macros/common" "~0.12.2"
     ast-walker-scope "^0.2.3"
     unplugin "^0.9.6"
 
