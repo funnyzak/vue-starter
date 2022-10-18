@@ -27,3 +27,5 @@ dist*
 coverage
 
 .env._*
+
+/.husky

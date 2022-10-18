@@ -33,7 +33,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - 引入 Animite.css
 - 使用 vue-Router
 - 实现了一套根据权限 Code 控制路由的逻辑
-- 使用 keepAlive,实现页面缓存
+- 使用 keepAlive, 实现页面缓存
 - 使用 Vitest 进行单元测试
 - Utils 通用工具函数
 
@@ -42,7 +42,7 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 使用的 Node 的构建版本为 `Node 16`，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
 
 ```bash
-# 切换node版本
+# 切换 node 版本
 nvm use 16.16.0
 
 # 安装依赖
@@ -57,10 +57,10 @@ yarn preview
 # 全部构建（所有）
 yarn build
 
-# Lint 格式化/检查
+# Lint 格式化 / 检查
 yarn lint:eslint
 
-# 删除node_modules
+# 删除 node_modules
 yarn clean
 
 # 代码格式化
@@ -149,7 +149,7 @@ Base On **Vue 3 + TypeScript + Vite** Template. This template should help get yo
 
 ### Type Support For `.vue` Imports in TS
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h (...)` calls), you can enable Volar's Take Over mode by following these steps:
 
 1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
 2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
