@@ -47,9 +47,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       preprocessorOptions: {
         less: {
           additionalData: '@import "./src/styles/variables.module.less";',
-          javascriptEnabled: true
-        }
-      }
+          javascriptEnabled: true,
+        },
+      },
     },
     resolve: {
       // 导入时想要省略的扩展名列表。注意，不 建议忽略自定义导入类型的扩展名（例如：.vue），因为它会影响 IDE 和类型支持。
@@ -57,17 +57,17 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       alias: [
         {
           find: /\@\//,
-          replacement: `${pathResolve('src')}/`
+          replacement: `${pathResolve('src')}/`,
         },
         {
           find: 'components',
-          replacement: pathResolve('src/components')
+          replacement: pathResolve('src/components'),
         },
         {
           find: 'vue-i18n',
-          replacement: 'vue-i18n/dist/vue-i18n.cjs.js'
-        }
-      ]
+          replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
+        },
+      ],
     },
     build: {
       target: 'es2015',
@@ -78,21 +78,25 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       assetsInlineLimit: 4096,
       // 启用/禁用 CSS 代码拆分。当启用时，在异步 chunk 中导入的 CSS 将内联到异步 chunk 本身，并在其被加载时插入。
       cssCodeSplit: true,
+
       // 多页面应用模式
       rollupOptions: {
         input: {
+          // 主应用
           main: pathResolve('index.html'),
-          nested: pathResolve('nested.html')
-        }
+          // 子应用
+          nested: pathResolve('nested.html'),
+        },
       },
+
       sourcemap: env.VITE_SOURCEMAP === 'true',
       minify: 'terser',
       terserOptions: {
         compress: {
           drop_debugger: env.VITE_DROP_DEBUGGER === 'true',
-          drop_console: env.VITE_DROP_CONSOLE === 'true'
-        }
-      }
+          drop_console: env.VITE_DROP_CONSOLE === 'true',
+        },
+      },
     },
     // vite 配置(环境变量)
     define: {
@@ -111,13 +115,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         '/api': {
           target: 'http://jsonplaceholder.typicode.com',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
+          rewrite: (path) => path.replace(/^\/api/, ''),
         },
         // 正则表达式写法
         '^/fallback/.*': {
           target: 'http://jsonplaceholder.typicode.com',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/fallback/, '')
+          rewrite: (path) => path.replace(/^\/fallback/, ''),
         },
         // 使用 proxy 实例
         '/api2': {
@@ -126,19 +130,19 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           configure: (_proxy, _options) => {
             console.log(_proxy, _options)
             // proxy 是 'http-proxy' 的实例
-          }
+          },
         },
         // Proxying websockets or socket.io
         '/socket.io': {
           target: 'ws://localhost:3000',
-          ws: true
-        }
-      }
+          ws: true,
+        },
+      },
     },
     preview: {
       open: false,
       // 跨域配置
-      cors: true
+      cors: true,
     },
     plugins: [
       vue(),
@@ -151,29 +155,29 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         threshold: 10240, // 体积大于 threshold 才会被压缩,单位 b
         algorithm: 'gzip', // 压缩算法,可选 [ 'gzip' , 'brotliCompress' ,'deflate' , 'deflateRaw']
         ext: '.gz', // 生成的压缩包后缀
-        deleteOriginFile: false //压缩后是否删除源文件
+        deleteOriginFile: false, //压缩后是否删除源文件
       }),
       legacy({
         polyfills: true,
-        targets: ['defaults', 'not IE 11']
+        targets: ['defaults', 'not IE 11'],
       }),
       vueI18n({
         runtimeOnly: false,
         compositionOnly: true,
-        include: [pathResolve('src/locales/**')]
+        include: [pathResolve('src/locales/**')],
       }),
       EslintPlugin({
         cache: false,
-        include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'] // 检查的文件
+        include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'], // 检查的文件
       }),
       createSvgIconsPlugin({
         iconDirs: [pathResolve('src/assets/svgs')],
         symbolId: 'icon-[dir]-[name]',
-        svgoOptions: true
-      })
+        svgoOptions: true,
+      }),
     ],
     optimizeDeps: {
-      include: ['vue', 'vue-router', 'vue-types', '@vueuse/core', 'axios', 'qs', 'intro.js']
+      include: ['vue', 'vue-router', 'vue-types', '@vueuse/core', 'axios', 'qs', 'intro.js'],
     },
     test: {
       include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
@@ -181,9 +185,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       global: true,
       open: true,
       coverage: {
-        reporter: ['text' as any, 'json' as any, 'html' as any]
-      }
-    }
+        reporter: ['text' as any, 'json' as any, 'html' as any],
+      },
+    },
   }
 
   if (command === 'serve') {
