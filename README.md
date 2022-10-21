@@ -1,12 +1,12 @@
 # Vue Starter
 
-基于 Vite，构建 `Vue3.0.0` 开发脚手架。以快速开启一个 Vue 项目。[Online Preview](https://vuestarter2.vercel.app/)。
+[![action][ci-image]][ci-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![tag][tag-image]][rle-url] [![license][license-image]][repository-url] 
 
-[![action][ci-image]][ci-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![tag][tag-image]][rle-url] [![license][license-image]][repository-url] 
-
+基于 Vite，和众多开源整合，构建 `Vue 3` 开发脚手架。快速开启一个 `Vue 3` 项目。[在线预览](https://vuestarter2.vercel.app/)。
 
  <!-- [![Sourcegraph][sg-image]][sg-url]  -->
-
+<!-- [![GitHub repo size][repo-size-image]][repository-url]
+ -->
 [ci-image]: https://github.com/funnyzak/vue-starter/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/funnyzak/vue-starter/actions
 [license-image]: https://img.shields.io/github/license/funnyzak/vue-starter.svg?style=flat-square
