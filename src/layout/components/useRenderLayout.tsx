@@ -1,4 +1,4 @@
-import AppView from './AppView.vue';
+import AppView from './AppView.vue'
 
 export const useRenderLayout = () => {
   const renderLayout = () => {
@@ -6,10 +6,10 @@ export const useRenderLayout = () => {
       <>
         <AppView></AppView>
       </>
-    );
-  };
+    )
+  }
 
   return {
     renderLayout
-  };
-};
+  }
+}

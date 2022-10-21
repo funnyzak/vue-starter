@@ -9,7 +9,7 @@ const { t } = useI18n()
 defineOptions({
   // 定义组件名称
   name: 'UserPost',
-  inheritAttrs: false
+  inheritAttrs: false,
 })
 
 const { back } = useRouter()
@@ -33,8 +33,8 @@ onBeforeMount(() => {
       <button
         @click="
           () => {
-            back();
-            return undefined;
+            back()
+            return undefined
           }
         "
         >{{ t('common.back') }}</button
@@ -45,8 +45,8 @@ onBeforeMount(() => {
       <button
         @click="
           () => {
-            postList = [];
-            return undefined;
+            postList = []
+            return undefined
           }
         "
         >清除数据</button
