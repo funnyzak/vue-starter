@@ -1,5 +1,5 @@
-import type { RouteRecordRaw } from 'vue-router';
-import { defineComponent } from 'vue';
+import type { RouteRecordRaw } from 'vue-router'
+import { defineComponent } from 'vue'
 
 /**
 * redirect: noredirect        当设置 noredirect 的时候该路由在面包屑导航中不可被点击

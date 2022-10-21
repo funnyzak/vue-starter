@@ -1,37 +1,37 @@
-import { resolve } from 'path';
-import { configDefaults } from 'vitest/config';
+import { resolve } from 'path'
+import { configDefaults } from 'vitest/config'
 
-import EslintPlugin from 'vite-plugin-eslint';
+import EslintPlugin from 'vite-plugin-eslint'
 
-import legacy from '@vitejs/plugin-legacy';
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
-import vueI18n from '@intlify/vite-plugin-vue-i18n';
-import DefineOptions from 'unplugin-vue-define-options/vite';
-import viteCompression from 'vite-plugin-compression';
-import WindiCSS from 'vite-plugin-windicss';
-import VueJsx from '@vitejs/plugin-vue-jsx';
+import legacy from '@vitejs/plugin-legacy'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import vueI18n from '@intlify/vite-plugin-vue-i18n'
+import DefineOptions from 'unplugin-vue-define-options/vite'
+import viteCompression from 'vite-plugin-compression'
+import WindiCSS from 'vite-plugin-windicss'
+import VueJsx from '@vitejs/plugin-vue-jsx'
 
-import { loadEnv } from 'vite';
-import type { UserConfig, ConfigEnv } from 'vite';
+import { loadEnv } from 'vite'
+import type { UserConfig, ConfigEnv } from 'vite'
 
-import vue from '@vitejs/plugin-vue';
+import vue from '@vitejs/plugin-vue'
 
 // 当前执行node命令时文件夹的地址（工作目录）
-const rootPath = process.cwd();
+const rootPath = process.cwd()
 
 // 路径查找
 function pathResolve(dir: string) {
-  return resolve(rootPath, '.', dir);
+  return resolve(rootPath, '.', dir)
 }
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
-  let env = {} as any;
+  let env = {} as any
   // const isBuild = command === 'build';
 
   // 根据当前工作目录中的 `mode` 加载 .env 文件
   // 设置第三个参数为 '' 来加载所有环境变量，而不管是否有 `VITE_` 前缀。
-  env = loadEnv(mode, rootPath, '');
+  env = loadEnv(mode, rootPath, '')
 
   // console.log(command, mode, JSON.stringify(env), ssrBuild);
   // console.log(env);
@@ -124,7 +124,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           target: 'http://jsonplaceholder.typicode.com',
           changeOrigin: true,
           configure: (_proxy, _options) => {
-            console.log(_proxy, _options);
+            console.log(_proxy, _options)
             // proxy 是 'http-proxy' 的实例
           }
         },
@@ -184,15 +184,15 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         reporter: ['text' as any, 'json' as any, 'html' as any]
       }
     }
-  };
+  }
 
   if (command === 'serve') {
     // dev 独有配置
-    viteConfig.server.open = false;
+    viteConfig.server.open = false
   } else {
     // command === 'build'
     // build 独有配置
   }
 
-  return viteConfig;
-};
+  return viteConfig
+}

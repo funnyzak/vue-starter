@@ -1,6 +1,6 @@
-import { defineConfig } from 'windicss/helpers';
-import plugin from 'windicss/plugin';
-import colors from 'windicss/colors';
+import { defineConfig } from 'windicss/helpers'
+import plugin from 'windicss/plugin'
+import colors from 'windicss/colors'
 
 export default defineConfig({
   extract: {
@@ -45,8 +45,8 @@ export default defineConfig({
         '.skew-15deg': {
           transform: 'skewY(-15deg)'
         }
-      };
-      addUtilities(newUtilities);
+      }
+      addUtilities(newUtilities)
     }),
     plugin(({ addComponents }) => {
       const buttons = {
@@ -69,8 +69,8 @@ export default defineConfig({
             backgroundColor: '#cc1f1a'
           }
         }
-      };
-      addComponents(buttons);
+      }
+      addComponents(buttons)
     }),
     plugin(({ addDynamic, variants }) => {
       addDynamic(
@@ -79,10 +79,10 @@ export default defineConfig({
           return Utility.handler
             .handleStatic(Style('skew'))
             .handleNumber(0, 360, 'int', (number) => `skewY(-${number}deg)`)
-            .createProperty('transform');
+            .createProperty('transform')
         },
         variants('skew')
-      );
+      )
     }),
     require('windicss/plugin/filters'),
     require('windicss/plugin/forms'),
@@ -92,4 +92,4 @@ export default defineConfig({
       modifiers: ['DEFAULT', 'sm', 'lg', 'red']
     })
   ]
-});
+})
