@@ -1,12 +1,12 @@
-name: Release
-
+name: CI
 on:
   push:
-    tags: # 当我们提交代码为tag 是以'v'开头的时候才会触发自动部署到服务端 如 git push tag v0.1.0
+    tags:
       - '*'
   workflow_dispatch:
 
-env: # 环境变量
+
+env:
   DIST_ARCHIVE_PREFIX_NAME: ${{ github.event.repository.name }}
 
 jobs:
@@ -40,39 +40,54 @@ jobs:
         run: |
           yarn eslint:check
           yarn test
+
   release:
     name: Release
     needs: lint-and-test
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
     strategy:
       matrix:
         node-version: [16.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Get the version
         id: get_version
         run: |
+          # Get the version from package.json
           echo ::set-output name=PACKAGE_VERSION_NAME::$(node -p "require('./package.json').version")
+          # Get the name from package.json
+          echo ::set-output name=PACKAGE_NAME::$(node -p "require('./package.json').name")
+          # current push sha
           echo ::set-output name=COMMIT_ID::$(echo ${{ github.sha }} | cut -c1-7)
+          # current push tag
+          echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+          # latest tag
+          echo ::set-output name=TAG_NAME::$(git describe --tags --abbrev=0)
+          # set current timestamp
+          echo ::set-output name=TIMESTAMP::$(date +%s)
+          # set current time and format
+          echo ::set-output name=BUILD_TIME::$(date "+%Y-%m-%d-%H-%M")
       - name: Set archive name
         id: set_name
         run: |
-          echo ::set-output name=ARCHIVE_NAME::$(echo "${{ env.DIST_ARCHIVE_PREFIX_NAME }}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
+          echo ::set-output name=DIST_ZIP_NAME::$(echo "${{ steps.get_version.outputs.PACKAGE_NAME}}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{steps.get_version.outputs.TIMESTAMP}}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
+          echo ::set-output name=SOURCE_ZIP_NAME::$(echo "${{ env.DIST_ARCHIVE_PREFIX_NAME }}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{steps.get_version.outputs.TIMESTAMP}}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
+      - name: Archive source code
+        uses: papeloto/action-zip@v1
+        with:
+          files: |
+            ./
+          recursive: false
+          dest: ${{ steps.set_name.outputs.SOURCE_ZIP_NAME }}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org/'
           cache: 'yarn'
-      - name: Archive Release
-        uses: papeloto/action-zip@v1
-        with:
-          files: |
-            ./
-          recursive: false
-          dest: ${{ steps.set_name.outputs.ARCHIVE_NAME }}
       - name: Restore yarn cache
         uses: actions/cache@v3
         with:
@@ -87,10 +102,9 @@ jobs:
       - name: Build
         working-directory: ./
         run: |
-          npm run build:demo
+          yarn build:demo
       - name: Build changelog
         id: build_changelog
-        if: startsWith(github.ref, 'refs/tags/')
         uses: mikepenz/release-changelog-builder-action@v3.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -103,13 +117,22 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           folder: dist-demo
+      - name: Archive dist
+        uses: papeloto/action-zip@v1
+        with:
+          files: |
+            ./dist-demo
+          recursive: false
+          dest: ${{ steps.set_name.outputs.DIST_ZIP_NAME }}
       - name: Create Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           body: ${{steps.build_changelog.outputs.changelog}}
+          name: ${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}
+          tag_name: ${{ steps.get_version.outputs.TAG_NAME }}
           files: |
-            ${{ steps.set_name.outputs.ARCHIVE_NAME }}
+            ${{ steps.set_name.outputs.SOURCE_ZIP_NAME }}
+            ${{ steps.set_name.outputs.DIST_ZIP_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
 
