@@ -718,7 +718,7 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.1.2.tgz#3cd52114e8871a0b5e7bd7d837469c032e503036"
   integrity sha512-3zxKNlvA3oNaKDYX0NBclgxTQ1xaFdL7PzwF6zj9tGFziKwmBa3Q/6XcJQxudlT81WxDjEhHmevvIC4Orc1LhQ==
 
-"@vitest/coverage-c8@^0.24.3":
+"@vitest/coverage-c8@0.24.3":
   version "0.24.3"
   resolved "https://registry.yarnpkg.com/@vitest/coverage-c8/-/coverage-c8-0.24.3.tgz#bc8b4f2a9f2ce5f82b41f98375b46c99ed1ddaf2"
   integrity sha512-tAmMyHxWYnAwGeJb7QgTuEX8aLasTg4X1/6INobXa/7wYGEJ28CACFO5iLn1HzFVPoLvhsS3luQjiflGjjSMRQ==
