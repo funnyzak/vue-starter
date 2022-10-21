@@ -2,7 +2,7 @@
 
 [![action][ci-image]][ci-url] [![Sourcegraph][sg-image]][sg-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![license][license-image]][repository-url]
 
-[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vue-starter/Release
+[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vue-starter/ci
 [ci-url]: https://github.com/funnyzak/vue-starter/actions
 [license-image]: https://img.shields.io/github/license/funnyzak/vue-starter.svg?style=flat-square
 [repository-url]: https://github.com/funnyzak/vue-starter
