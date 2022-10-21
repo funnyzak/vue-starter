@@ -1,20 +1,24 @@
 # Vue Starter
 
-[![action][ci-image]][ci-url] [![Sourcegraph][sg-image]][sg-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![license][license-image]][repository-url]
+基于 Vite，构建 `Vue3.0.0` 开发脚手架。以快速开启一个 Vue 项目。[Online Preview](https://vuestarter2.vercel.app/)。
 
-[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/vue-starter/ci
+[![action][ci-image]][ci-url] [![GitHub repo size][repo-size-image]][repository-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![tag][tag-image]][rle-url] [![license][license-image]][repository-url] 
+
+
+ <!-- [![Sourcegraph][sg-image]][sg-url]  -->
+
+[ci-image]: https://github.com/funnyzak/vue-starter/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/funnyzak/vue-starter/actions
 [license-image]: https://img.shields.io/github/license/funnyzak/vue-starter.svg?style=flat-square
 [repository-url]: https://github.com/funnyzak/vue-starter
 [repo-size-image]: https://img.shields.io/github/repo-size/funnyzak/vue-starter
 [commit-activity-image]: https://img.shields.io/github/commit-activity/m/funnyzak/vue-starter?style=flat-square
-[last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vue-starter?style=flat-square
-[rle-image]: https://img.shields.io/github/release-date/funnyzak/vue-starter.svg
+[last-commit-image]: https://img.shields.io/github/last-commit/funnyzak/vue-starter?style=flat-square&lable=commit
+[rle-image]: https://img.shields.io/github/release-date/funnyzak/vue-starter.svg?label=release
 [rle-url]: https://github.com/funnyzak/vue-starter/releases/latest
 [sg-url]: https://sourcegraph.com/github.com/funnyzak/vue-starter
 [sg-image]: https://img.shields.io/badge/view%20on-Sourcegraph-brightgreen.svg?style=flat-square
-
-Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项目。[Online Preview](https://vuestarter2.vercel.app/)。
+[tag-image]: https://img.shields.io/github/tag/funnyzak/vue-starter.svg
 
 ## 特性
 
