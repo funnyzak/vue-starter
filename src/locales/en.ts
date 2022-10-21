@@ -181,4 +181,4 @@ export default {
       placeholder: 'Please enter the lock screen password or user password'
     }
   }
-};
+}

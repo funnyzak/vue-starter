@@ -21,6 +21,6 @@ const config: {
   default_headers: 'application/json',
 
   withCredentials: true
-};
+}
 
-export { config };
+export { config }

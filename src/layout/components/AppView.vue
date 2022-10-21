@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useCacheViewStore } from '@/store/modules/cacheView';
-import { computed } from 'vue';
+import { useCacheViewStore } from '@/store/modules/cacheView'
+import { computed } from 'vue'
 
-const cacheViewStore = useCacheViewStore();
+const cacheViewStore = useCacheViewStore()
 
 const getCaches = computed((): string[] => {
-  return cacheViewStore.getCachedViews;
-});
+  return cacheViewStore.getCachedViews
+})
 </script>
 
 <template>

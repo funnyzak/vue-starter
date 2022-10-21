@@ -1,1 +1,1 @@
-import 'animate.css';
+import 'animate.css'

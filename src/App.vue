@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { getUser } from '@/utils/auth';
-import { useUserStore } from '@/store/modules/user';
+import { getUser } from '@/utils/auth'
+import { useUserStore } from '@/store/modules/user'
 
-const userStore = useUserStore();
+const userStore = useUserStore()
 
 // 读取本地用户缓存到store
-const user = getUser();
+const user = getUser()
 if (user) {
-  userStore.setUserInfo(user);
+  userStore.setUserInfo(user)
 }
 </script>
 <template>

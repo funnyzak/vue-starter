@@ -8,7 +8,7 @@
 export const CommonStatusEnum = {
   ENABLE: 0, // 开启
   DISABLE: 1 // 禁用
-};
+}
 
 /**
  * 用户的社交平台的类型枚举
@@ -24,7 +24,7 @@ export const SystemUserSocialTypeEnum = {
     type: 30,
     source: 'wechat_enterprise'
   }
-};
+}
 
 /**
  * 支付渠道枚举
@@ -58,7 +58,7 @@ export const PayChannelEnum = {
     code: 'alipay_qr',
     name: '支付宝扫码支付'
   }
-};
+}
 
 /**
  * 支付类型枚举
@@ -66,7 +66,7 @@ export const PayChannelEnum = {
 export const PayType = {
   WECHAT: 'WECHAT',
   ALIPAY: 'ALIPAY'
-};
+}
 
 /**
  * 支付订单状态枚举
@@ -84,7 +84,7 @@ export const PayOrderStatusEnum = {
     status: 20,
     name: '未支付'
   }
-};
+}
 
 /**
  * 支付订单回调状态枚举
@@ -102,7 +102,7 @@ export const PayOrderNotifyStatusEnum = {
     status: 20,
     name: '通知失败'
   }
-};
+}
 
 /**
  * 支付订单退款状态枚举
@@ -120,7 +120,7 @@ export const PayOrderRefundStatusEnum = {
     status: 20,
     name: '全部退款'
   }
-};
+}
 
 /**
  * 支付退款订单状态枚举
@@ -158,4 +158,4 @@ export const PayRefundStatusEnum = {
     status: 99,
     name: '退款关闭'
   }
-};
+}

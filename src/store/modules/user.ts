@@ -1,6 +1,6 @@
-import { UserInfoVO } from '@/api/login/types';
-import { defineStore } from 'pinia';
-import { store } from '../index';
+import { UserInfoVO } from '@/api/login/types'
+import { defineStore } from 'pinia'
+import { store } from '../index'
 
 export const useUserStore = defineStore({
   id: 'user',
@@ -18,29 +18,29 @@ export const useUserStore = defineStore({
   },
   getters: {
     getUserInfo(): UserInfoVO {
-      return this;
+      return this
     }
   },
   actions: {
     setUserInfo(userInfo: UserInfoVO) {
-      this.resetState();
+      this.resetState()
 
-      this.permissions = userInfo.permissions;
-      this.roles = userInfo.roles;
-      this.user = userInfo.user;
+      this.permissions = userInfo.permissions
+      this.roles = userInfo.roles
+      this.user = userInfo.user
     },
     resetState() {
-      this.permissions = [];
-      this.roles = [];
+      this.permissions = []
+      this.roles = []
       this.user = {
         id: 0,
         avatar: '',
         nickname: ''
-      };
+      }
     }
   }
-});
+})
 
 export const useUserStoreWithOut = () => {
-  return useUserStore(store);
-};
+  return useUserStore(store)
+}

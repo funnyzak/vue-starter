@@ -1,29 +1,29 @@
 <script setup lang="ts">
 // import { useRouter } from 'vue-router';
 
-import HelloWorld from '@/components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue'
 
-import { computed } from 'vue';
-import { useLocaleStoreWithOut } from '@/store/modules/locale';
-import { useUserStore } from '@/store/modules/user';
+import { computed } from 'vue'
+import { useLocaleStoreWithOut } from '@/store/modules/locale'
+import { useUserStore } from '@/store/modules/user'
 
-import { useAppStore } from '@/store/modules/app';
-import { useLocale, useI18n } from '@/hooks';
-import { useMouse, useCounter } from '@vueuse/core';
+import { useAppStore } from '@/store/modules/app'
+import { useLocale, useI18n } from '@/hooks'
+import { useMouse, useCounter } from '@vueuse/core'
 
 // const { push } = useRouter();
 
-const { x, y } = useMouse();
-const { count, inc, dec } = useCounter();
+const { x, y } = useMouse()
+const { count, inc, dec } = useCounter()
 
-const appStore = useAppStore();
-const userStore = useUserStore();
-const localeStore = useLocaleStoreWithOut();
-const { t } = useI18n();
-const { changeLocale } = useLocale();
+const appStore = useAppStore()
+const userStore = useUserStore()
+const localeStore = useLocaleStoreWithOut()
+const { t } = useI18n()
+const { changeLocale } = useLocale()
 
-const appName = computed(() => appStore.getAppName);
-const userInfo = computed(() => userStore.getUserInfo);
+const appName = computed(() => appStore.getAppName)
+const userInfo = computed(() => userStore.getUserInfo)
 </script>
 
 <template>

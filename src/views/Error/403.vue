@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { Error } from '@/components/Error';
-import { useRouter } from 'vue-router';
+import { Error } from '@/components/Error'
+import { useRouter } from 'vue-router'
 
-const { push } = useRouter();
+const { push } = useRouter()
 
 const errorClick = () => {
-  push('/');
-};
+  push('/')
+}
 </script>
 
 <template>

@@ -1,11 +1,11 @@
-import { service } from '@/config/axios';
+import { service } from '@/config/axios'
 
-import { config } from '@/config/axios/config';
+import { config } from '@/config/axios/config'
 
-const { default_headers } = config;
+const { default_headers } = config
 
 const request = (option: AxiosConfig) => {
-  const { url, method, params, data, headersType, responseType } = option;
+  const { url, method, params, data, headersType, responseType } = option
   return service({
     url: url,
     method,
@@ -15,27 +15,27 @@ const request = (option: AxiosConfig) => {
     headers: {
       'Content-Type': headersType || default_headers
     }
-  });
-};
+  })
+}
 
 async function getFn<T = any>(option: AxiosConfig): Promise<T> {
-  const res = await request({ method: 'GET', ...option });
-  return res.data || res;
+  const res = await request({ method: 'GET', ...option })
+  return res.data || res
 }
 
 async function postFn<T = any>(option: AxiosConfig): Promise<T> {
-  const res = await request({ method: 'POST', ...option });
-  return res.data || res;
+  const res = await request({ method: 'POST', ...option })
+  return res.data || res
 }
 
 async function deleteFn<T = any>(option: AxiosConfig): Promise<T> {
-  const res = await request({ method: 'DELETE', ...option });
-  return res.data || res;
+  const res = await request({ method: 'DELETE', ...option })
+  return res.data || res
 }
 
 async function putFn<T = any>(option: AxiosConfig): Promise<T> {
-  const res = await request({ method: 'PUT', ...option });
-  return res.data || res;
+  const res = await request({ method: 'PUT', ...option })
+  return res.data || res
 }
 
 export const useAxios = () => {
@@ -44,5 +44,5 @@ export const useAxios = () => {
     post: postFn,
     delete: deleteFn,
     put: putFn
-  };
-};
+  }
+}

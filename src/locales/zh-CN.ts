@@ -180,4 +180,4 @@ export default {
       placeholder: '请输入锁屏密码或者用户密码'
     }
   }
-};
+}

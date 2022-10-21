@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import pageError from '@/assets/svgs/404.svg';
-import networkError from '@/assets/svgs/500.svg';
-import noPermission from '@/assets/svgs/403.svg';
-import { propTypes } from '@/utils/propTypes';
-import { useI18n } from '@/hooks/web/useI18n';
+import pageError from '@/assets/svgs/404.svg'
+import networkError from '@/assets/svgs/500.svg'
+import noPermission from '@/assets/svgs/403.svg'
+import { propTypes } from '@/utils/propTypes'
+import { useI18n } from '@/hooks/web/useI18n'
 
 interface ErrorMap {
   url: string;
@@ -11,7 +11,7 @@ interface ErrorMap {
   buttonText: string;
 }
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const errorMap: {
   [key: string]: ErrorMap;
@@ -31,17 +31,17 @@ const errorMap: {
     message: t('error.noPermission'),
     buttonText: t('error.returnToHome')
   }
-};
+}
 
 const props = defineProps({
   type: propTypes.string.validate((_v: string) => ['404', '500', '403'].includes(_v)).def('404')
-});
+})
 
-const emit = defineEmits(['errorClick']);
+const emit = defineEmits(['errorClick'])
 
 const btnClick = () => {
-  emit('errorClick', props.type);
-};
+  emit('errorClick', props.type)
+}
 </script>
 
 <template>

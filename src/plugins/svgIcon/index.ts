@@ -1,1 +1,1 @@
-import 'virtual:svg-icons-register';
+import 'virtual:svg-icons-register'

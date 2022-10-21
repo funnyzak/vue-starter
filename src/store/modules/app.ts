@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia';
-import { store } from '../index';
-import { useCache } from '@/hooks/web/useCache';
-import { appModules } from '@/config/app';
-import type { AppState } from '@/config/app';
-const { wsCache } = useCache();
+import { defineStore } from 'pinia'
+import { store } from '../index'
+import { useCache } from '@/hooks/web/useCache'
+import { appModules } from '@/config/app'
+import type { AppState } from '@/config/app'
+const { wsCache } = useCache()
 
 export const useAppStore = defineStore({
   id: 'app',
@@ -13,29 +13,29 @@ export const useAppStore = defineStore({
   },
   getters: {
     getAppName(): string {
-      return this.appName;
+      return this.appName
     },
     getIsDark(): boolean {
-      return this.isDark;
+      return this.isDark
     },
     getPageLoading(): boolean {
-      return this.pageLoading;
+      return this.pageLoading
     }
   },
   actions: {
     setAppName(appName: string) {
-      this.appName = appName;
+      this.appName = appName
     },
     setLocale(isDark: boolean) {
-      this.isDark = isDark;
-      wsCache.set('isDark', this.isDark);
+      this.isDark = isDark
+      wsCache.set('isDark', this.isDark)
     },
     setPageLoading(pageLoading: boolean) {
-      this.pageLoading = pageLoading;
+      this.pageLoading = pageLoading
     }
   }
-});
+})
 
 export const useAppStoreWithOut = () => {
-  return useAppStore(store);
-};
+  return useAppStore(store)
+}

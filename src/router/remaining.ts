@@ -1,6 +1,6 @@
-import { Layout } from '@/utils/routerHelper';
-import { useI18n } from '@/hooks/web/useI18n';
-const { t } = useI18n();
+import { Layout } from '@/utils/routerHelper'
+import { useI18n } from '@/hooks/web/useI18n'
+const { t } = useI18n()
 
 // 此路由不需要权限绑定，属于公共路由，不过也需登陆
 const remainingRouter: AppRouteRecordRaw[] = [
@@ -68,6 +68,6 @@ const remainingRouter: AppRouteRecordRaw[] = [
       title: '500'
     }
   }
-];
+]
 
-export default remainingRouter;
+export default remainingRouter

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { useI18n } from '@/hooks/web/useI18n';
-import { useAppStore } from '@/store/modules/app';
-import { usePermissionStore } from '@/store/modules/permission';
-import { useUserStore } from '@/store/modules/user';
-import { setToken, setUser } from '@/utils/auth';
-import { ref, watch } from 'vue';
-import type { RouteLocationNormalizedLoaded, RouteRecordRaw } from 'vue-router';
-import { useRouter } from 'vue-router';
+import { useI18n } from '@/hooks/web/useI18n'
+import { useAppStore } from '@/store/modules/app'
+import { usePermissionStore } from '@/store/modules/permission'
+import { useUserStore } from '@/store/modules/user'
+import { setToken, setUser } from '@/utils/auth'
+import { ref, watch } from 'vue'
+import type { RouteLocationNormalizedLoaded, RouteRecordRaw } from 'vue-router'
+import { useRouter } from 'vue-router'
 
-const { t } = useI18n();
-const appStore = useAppStore();
-const userStore = useUserStore();
-const permissionStore = usePermissionStore();
+const { t } = useI18n()
+const appStore = useAppStore()
+const userStore = useUserStore()
+const permissionStore = usePermissionStore()
 
-const redirect = ref<string>('');
+const redirect = ref<string>('')
 
-const { currentRoute, addRoute, push, back } = useRouter();
+const { currentRoute, addRoute, push, back } = useRouter()
 
 const userToken = {
   id: 1,
@@ -25,7 +25,7 @@ const userToken = {
   userType: 1,
   clientId: '7',
   expiresTime: new Date().getTime() + 3600
-};
+}
 
 const userInfo = {
   user: {
@@ -34,39 +34,39 @@ const userInfo = {
   },
   permissions: ['user.home'],
   roles: []
-};
+}
 
 // 登录
 const handleLogin = () => {
-  userStore.setUserInfo(userInfo);
-  setUser(userInfo);
+  userStore.setUserInfo(userInfo)
+  setUser(userInfo)
 
   // 设置登陆token
-  setToken(userToken);
+  setToken(userToken)
 
   permissionStore.generateRoutes(userInfo.permissions).then(() => {
     permissionStore.getAddRouters.forEach((route) => {
-      addRoute(route as RouteRecordRaw); // 动态添加可访问路由表
-    });
+      addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
+    })
 
-    permissionStore.setIsAddRouters(true);
+    permissionStore.setIsAddRouters(true)
 
     // 跳转到授权页
-    push({ name: 'UserHome' });
-  });
+    push({ name: 'UserHome' })
+  })
 
-  return undefined;
-};
+  return undefined
+}
 
 watch(
   () => currentRoute.value,
   (route: RouteLocationNormalizedLoaded) => {
-    redirect.value = route?.query?.redirect as string;
+    redirect.value = route?.query?.redirect as string
   },
   {
     immediate: true
   }
-);
+)
 </script>
 <template>
   <div class="text-center mt-30">
