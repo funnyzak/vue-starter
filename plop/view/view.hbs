@@ -2,7 +2,8 @@
 import { useSlots } from 'vue'
 
 defineOptions({
-  name: '{{ upperFirstName }}'
+  name: '{{ upperFirstName }}',
+  inheritAttrs: false
 })
 const slots = useSlots()
 </script>
