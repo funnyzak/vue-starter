@@ -73,8 +73,8 @@ jobs:
       - name: Set archive name
         id: set_name
         run: |
-          echo ::set-output name=DIST_ZIP_NAME::$(echo "${{ steps.get_version.outputs.PACKAGE_NAME}}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{steps.get_version.outputs.TIMESTAMP}}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
-          echo ::set-output name=SOURCE_ZIP_NAME::$(echo "${{ env.DIST_ARCHIVE_PREFIX_NAME }}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{steps.get_version.outputs.TIMESTAMP}}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
+          echo ::set-output name=DIST_ZIP_NAME::$(echo "dist-${{ steps.get_version.outputs.PACKAGE_NAME}}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{steps.get_version.outputs.TIMESTAMP}}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
+          echo ::set-output name=SOURCE_ZIP_NAME::$(echo "source-${{ env.DIST_ARCHIVE_PREFIX_NAME }}-${{ steps.get_version.outputs.PACKAGE_VERSION_NAME }}-${{steps.get_version.outputs.TIMESTAMP}}-${{ steps.get_version.outputs.COMMIT_ID }}.zip")
       - name: Archive source code
         uses: papeloto/action-zip@v1
         with:
