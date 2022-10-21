@@ -1,1 +1,0 @@
-import{j as r,l as s,p as e,u as o,_ as a}from"./_plugin-vue_export-helper.323397d8.js";import{E as t}from"./Error.85465963.js";import{u}from"./main.fca982d0.js";const p=a(r({__name:"404",setup(r){const{push:a}=u(),p=()=>{a("/")};return(r,a)=>(s(),e(o(t),{onErrorClick:p}))}}),[["__file","/home/runner/work/vue-starter/vue-starter/src/views/Error/404.vue"]]);export{p as default};
