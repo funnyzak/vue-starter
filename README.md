@@ -37,14 +37,11 @@ Vue **3.0.0** 脚手架，构建基于 Vite。用于快速开启一个 Vue 项�
 - 使用 Vitest 进行单元测试
 - Utils 通用工具函数
 
-## 使用
+## 开始
 
-使用的 Node 的构建版本为 `Node 16`，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
+使用 `Node 14` 或更高版本进行开发，常用命令如下：
 
 ```bash
-# 切换 node 版本
-nvm use 16.16.0
-
 # 安装依赖
 yarn
 
@@ -57,16 +54,19 @@ yarn preview
 # 全部构建（所有）
 yarn build
 
-# Lint 格式化 / 检查
-yarn lint:eslint
-
 # 删除 node_modules
 yarn clean
+
+# EsLint 检查
+yarn eslint:check
+
+# ESLint 修复
+yarn eslint:fix
 
 # 代码格式化
 yarn lint:format
 
-# lint staged
+# lint staged hook 检查
 yarn lint:staged
 
 # 模板新建
@@ -75,7 +75,9 @@ yarn p
 # test
 yarn test
 yarn test-ui
-yarn coverage
+
+# coverage report
+yarn cov
 
 # 更多请看 package.json
 yarn serve:dev
@@ -84,6 +86,12 @@ yarn serve:test
 
 # windicss-analysis
 yarn windicss-analysis
+
+# build your mode
+npx vite build --mode your-mode
+
+# dev your mode
+npx vite --mode your-mode
 ```
 
 ## 目录
