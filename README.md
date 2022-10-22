@@ -1,8 +1,10 @@
 # Vue Starter
 
-[![action][ci-image]][ci-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![tag][tag-image]][rle-url] [![license][license-image]][repository-url] 
+[![action][ci-image]][ci-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![tag][tag-image]][rle-url] [![license][license-image]][repository-url]
 
-基于 Vite，和众多开源整合，构建 `Vue 3` 开发脚手架。快速开启一个 `Vue 3` 项目。[在线预览](https://vuestarter2.vercel.app/)。
+基于 ` Vue 3 + TypeScript + Vite` ，及众多开源整合，构建 `Vue` 开发脚手架。帮助你进行 `Vue` 项目开发。使用 `Vitest` 进行单元测试。
+
+[在线预览](https://vuestarter2.vercel.app/)
 
  <!-- [![Sourcegraph][sg-image]][sg-url]  -->
 <!-- [![GitHub repo size][repo-size-image]][repository-url]
@@ -20,7 +22,7 @@
 [sg-image]: https://img.shields.io/badge/view%20on-Sourcegraph-brightgreen.svg?style=flat-square
 [tag-image]: https://img.shields.io/github/tag/funnyzak/vue-starter.svg
 
-## 特性
+## Features
 
 - Typescript 支持
 - CSS 预处理 less、sass、stylus、WindiCSS
@@ -41,15 +43,17 @@
 - 使用 Vitest 进行单元测试
 - Utils 通用工具函数
 
-## 开始
+## Environment
 
-使用 `Node 14` 或更高版本进行开发，常用命令如下：
+`Node` 建议使用 `Node 16` 或更高版本。开发工具建议使用 [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)。
+
+## Usage
 
 ```bash
 # 安装依赖
 yarn
 
-# 默认启动（所有）
+# 默认启动
 yarn dev
 
 # 预览
@@ -83,7 +87,7 @@ yarn test-ui
 # coverage report
 yarn cov
 
-# 更多请看 package.json
+# dev server
 yarn serve:dev
 yarn serve:prod
 yarn serve:test
@@ -98,7 +102,7 @@ npx vite build --mode your-mode
 npx vite --mode your-mode
 ```
 
-## 目录
+## Structure
 
     ├── .editorconfig                            // 编辑器配置文件
     ├── .env.development                         // 环境配置文件（开发环境）
@@ -113,8 +117,8 @@ npx vite --mode your-mode
     ├── LICENSE                                  // 许可证文件
     ├── README.md                                // 项目介绍文件
     ├── dist                                     // 打包输出目录
-    ├── index.html                               // 项目入口文件
-    ├── nested.html                              // 嵌套页面入口文件
+    ├── index.html                               // 主项目入口文件
+    ├── nested.html                              // 次/嵌套页面入口文件
     ├── package-lock.json                        // 包依赖配置文件
     ├── package.json                             // 包配置文件
     ├── plop                                     // plop 配置
@@ -136,8 +140,8 @@ npx vite --mode your-mode
     │   ├── directives                           // 指令目录
     │   ├── hooks                                // 钩子目录
     │   ├── locales                              // 国际化目录
-    │   ├── views                                // 视图目录
-    │   ├── pages                                // 页面目录
+    │   ├── views                                // 默认视图目录
+    │   ├── pages                                // 次页面目录（备用，构建多页应用）
     │   ├── plugins                              // 插件目录
     │   ├── store                                // 状态管理
     │   ├── styles                               // 样式目录
@@ -151,24 +155,17 @@ npx vite --mode your-mode
     ├── types                                    // 类型文件目录
     └── vite.config.ts                           // vite 配置文件
 
-## template
-
-Base On **Vue 3 + TypeScript + Vite** Template. This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Q&A
 
 ### Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-### Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h (...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+### Use Take Over Mode instead of TS Plugin
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
-## 参考
+## Reference
 
 - [Vitest](https://cn.vitest.dev/guide/features.html)
 - [vite](https://cn.vitejs.dev/guide/features.htm)
@@ -182,6 +179,8 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 - [prettier](https://prettier.io/docs/en/index.html)
 - [ruoyi](https://github.dev/YunaiV/ruoyi-vue-pro/)
 - [EsLint](https://eslint.org/docs/user-guide/configuring/)
+- [SFC](https://v3.vuejs.org/guide/single-file-component.html)
+- [SFC setup](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup)
 
 ## Contribution
 
