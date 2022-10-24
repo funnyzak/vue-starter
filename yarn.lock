@@ -3193,10 +3193,10 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-jsencrypt@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/jsencrypt/-/jsencrypt-3.2.1.tgz#09766983cc760088ff26b12fe7e574252af97727"
-  integrity sha512-k1sD5QV0KPn+D8uG9AdGzTQuamt82QZ3A3l6f7TRwMU6Oi2Vg0BsL+wZIQBONcraO1pc78ExMdvmBBJ8WhNYUA==
+jsencrypt@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/jsencrypt/-/jsencrypt-3.3.0.tgz#110ea2326cf6d05e5ae92be852c051badeffc4d4"
+  integrity sha512-OPfQMUU3pJ6KKTvKzr83jePHfyD1zWiWeLtRU9yIWjcbaRWm8MuXIu1/eQlDXPwDZrUjZy+9HVamS2Kmwrvz/Q==
 
 jsesc@^2.5.1:
   version "2.5.2"
