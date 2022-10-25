@@ -1,0 +1,21 @@
+diff --git a/node_modules/jsencrypt/lib/JSEncrypt.js b/node_modules/jsencrypt/lib/JSEncrypt.js
+index 17c3d08..4c441ee 100644
+--- a/node_modules/jsencrypt/lib/JSEncrypt.js
++++ b/node_modules/jsencrypt/lib/JSEncrypt.js
+@@ -1,6 +1,6 @@
+ import { b64tohex, hex2b64 } from "./lib/jsbn/base64";
+ import { JSEncryptRSAKey } from "./JSEncryptRSAKey";
+-var version = process.env.npm_package_version;
++// var version = process.env.npm_package_version;
+ /**
+  *
+  * @param {Object} [options = {}] - An object to customize JSEncrypt behaviour
+@@ -183,7 +183,7 @@ var JSEncrypt = /** @class */ (function () {
+         // Return the private representation of this key.
+         return this.getKey().getPublicBaseKeyB64();
+     };
+-    JSEncrypt.version = version;
++    // JSEncrypt.version = version;
+     return JSEncrypt;
+ }());
+ export { JSEncrypt };
