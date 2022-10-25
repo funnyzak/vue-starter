@@ -37,7 +37,7 @@
     "ts:check": "vue-tsc --noEmit",
     "eslint:check": "eslint --ext .js,.ts,.vue,.tsx ./",
     "eslint:fix": "eslint --fix --ext .js,.ts,.vue,.tsx ./",
-    "style:check": "prettier --check --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
+    "style:check": "prettier --check --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "style:fix": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "lint:staged": "lint-staged",
     "p": "plop",
