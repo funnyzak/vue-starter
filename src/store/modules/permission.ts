@@ -6,9 +6,9 @@ import { defineStore } from 'pinia'
 import { store } from '../index'
 
 export interface PermissionState {
-  routers: AppRouteRecordRaw[];
-  addRouters: AppRouteRecordRaw[];
-  isAddRouters: boolean;
+  routers: AppRouteRecordRaw[]
+  addRouters: AppRouteRecordRaw[]
+  isAddRouters: boolean
 }
 
 export const usePermissionStore = defineStore({

@@ -79,8 +79,8 @@ watch(
       class="btn"
       @click="
         () => {
-          back();
-          return undefined;
+          back()
+          return undefined
         }
       "
       >{{ t('common.back') }}</button

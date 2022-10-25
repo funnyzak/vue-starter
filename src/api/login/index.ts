@@ -5,17 +5,17 @@ import type { UserLoginVO } from './types'
 const request = useAxios()
 
 export interface CodeImgResult {
-  captchaOnOff: boolean;
-  img: string;
-  uuid: string;
+  captchaOnOff: boolean
+  img: string
+  uuid: string
 }
 export interface SmsCodeVO {
-  mobile: string;
-  scene: number;
+  mobile: string
+  scene: number
 }
 export interface SmsLoginVO {
-  mobile: string;
-  code: string;
+  mobile: string
+  code: string
 }
 
 // 获取验证码

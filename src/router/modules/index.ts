@@ -2,7 +2,7 @@
 import userRouters from './user'
 
 const routeMap: {
-  [key: string]: AppRouteRecordRaw[];
+  [key: string]: AppRouteRecordRaw[]
 } = {
   user: userRouters
 }

@@ -1,5 +1,5 @@
 // @ts-check
-const { defineConfig } = require('eslint-define-config')
+const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   root: true,
   globals: { defineOptions: 'writable' },
@@ -21,6 +21,7 @@ module.exports = defineConfig({
   extends: ['plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   rules: {
     'semi': ['error', 'never'],
+    'comma-dangle': ['error', 'never'],
     'vue/script-setup-uses-vars': 'error',
     'vue/no-reserved-component-names': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
@@ -68,4 +69,4 @@ module.exports = defineConfig({
     ],
     'vue/multi-word-component-names': 'off'
   }
-})
+});

@@ -1,8 +1,8 @@
 const config: {
-  result_code: number | string;
-  default_headers: AxiosHeaders;
-  request_timeout: number;
-  withCredentials: boolean;
+  result_code: number | string
+  default_headers: AxiosHeaders
+  request_timeout: number
+  withCredentials: boolean
 } = {
   /**
    * 接口成功返回状态码

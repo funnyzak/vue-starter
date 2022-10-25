@@ -15,8 +15,8 @@ const { push } = useRouter()
     <button
       @click="
         () => {
-          push({ name: 'UserPost' });
-          return undefined;
+          push({ name: 'UserPost' })
+          return undefined
         }
       "
       >{{ t('router.post') }}</button
@@ -24,8 +24,8 @@ const { push } = useRouter()
     <button
       @click="
         () => {
-          push({ name: 'UserPost2' });
-          return undefined;
+          push({ name: 'UserPost2' })
+          return undefined
         }
       "
       >文章2</button
@@ -33,8 +33,8 @@ const { push } = useRouter()
     <button
       @click="
         () => {
-          push({ name: 'HomeIndex' });
-          return undefined;
+          push({ name: 'HomeIndex' })
+          return undefined
         }
       "
       >{{ t('common.back') }}</button
@@ -42,11 +42,11 @@ const { push } = useRouter()
     <button
       @click="
         () => {
-          clearAuth();
-          resetRouterLeaveRemain();
-          userStore.resetState();
-          push({ name: 'HomeIndex' });
-          return undefined;
+          clearAuth()
+          resetRouterLeaveRemain()
+          userStore.resetState()
+          push({ name: 'HomeIndex' })
+          return undefined
         }
       "
       >{{ t('common.logout') }}</button

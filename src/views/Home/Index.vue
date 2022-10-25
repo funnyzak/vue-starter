@@ -39,8 +39,8 @@ const userInfo = computed(() => userStore.getUserInfo)
         class="pr-2"
         @click="
           () => {
-            changeLocale(localMap.lang);
-            return undefined;
+            changeLocale(localMap.lang)
+            return undefined
           }
         "
       >
@@ -61,8 +61,8 @@ const userInfo = computed(() => userStore.getUserInfo)
       <a
         @click="
           () => {
-            inc();
-            return undefined;
+            inc()
+            return undefined
           }
         "
         style="margin-right: 10px"
@@ -71,8 +71,8 @@ const userInfo = computed(() => userStore.getUserInfo)
       <a
         @click="
           () => {
-            dec();
-            return undefined;
+            dec()
+            return undefined
           }
         "
         >-</a

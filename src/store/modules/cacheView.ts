@@ -6,8 +6,8 @@ import { store } from '../index'
 import { findIndex } from '@/utils'
 
 export interface CacheViewState {
-  visitedViews: RouteLocationNormalizedLoaded[];
-  cachedViews: Set<string>;
+  visitedViews: RouteLocationNormalizedLoaded[]
+  cachedViews: Set<string>
 }
 
 export const useCacheViewStore = defineStore({

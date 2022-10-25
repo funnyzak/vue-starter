@@ -3,8 +3,8 @@ import { computed, unref } from 'vue'
 import { useLocaleStoreWithOut } from '@/store/modules/locale'
 
 const TIME_AGO_MESSAGE_MAP: {
-  'zh-CN': UseTimeAgoMessages;
-  'en': UseTimeAgoMessages;
+  'zh-CN': UseTimeAgoMessages
+  'en': UseTimeAgoMessages
 } = {
   'zh-CN': {
     justNow: '刚刚',

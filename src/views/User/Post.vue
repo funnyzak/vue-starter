@@ -9,7 +9,7 @@ const { t } = useI18n()
 defineOptions({
   // 定义组件名称
   name: 'UserPost',
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const { back } = useRouter()

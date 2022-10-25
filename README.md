@@ -71,8 +71,11 @@ yarn eslint:check
 # ESLint 修复
 yarn eslint:fix
 
-# 代码格式化
-yarn lint:format
+# 使用 prettier 代码格式检查
+yarn style:check
+
+# 使用 prettier 代码格式化
+yarn style:fix
 
 # lint staged hook 检查
 yarn lint:staged

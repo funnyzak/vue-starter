@@ -6,15 +6,15 @@ import { propTypes } from '@/utils/propTypes'
 import { useI18n } from '@/hooks/web/useI18n'
 
 interface ErrorMap {
-  url: string;
-  message: string;
-  buttonText: string;
+  url: string
+  message: string
+  buttonText: string
 }
 
 const { t } = useI18n()
 
 const errorMap: {
-  [key: string]: ErrorMap;
+  [key: string]: ErrorMap
 } = {
   '404': {
     url: pageError,
@@ -53,8 +53,8 @@ const btnClick = () => {
         <button
           @click="
             () => {
-              btnClick();
-              return undefined;
+              btnClick()
+              return undefined
             }
           "
           >{{ errorMap[type].buttonText }}</button

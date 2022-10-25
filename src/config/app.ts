@@ -2,9 +2,9 @@ import { useCache } from '@/hooks/web/useCache'
 const { wsCache } = useCache()
 
 export interface AppState {
-  appName: string;
-  isDark: boolean;
-  pageLoading: boolean;
+  appName: string
+  isDark: boolean
+  pageLoading: boolean
 }
 
 export const appModules: AppState = {
