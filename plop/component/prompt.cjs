@@ -7,13 +7,13 @@ module.exports = {
       type: 'input',
       name: 'path',
       message: '请输入路径（Please enter the component path）',
-      default: 'common',
+      default: 'common'
     },
     {
       type: 'input',
       name: 'name',
-      message: '请输入组件名称（Please enter the component name）',
-    },
+      message: '请输入组件名称（Please enter the component name）'
+    }
   ],
   actions: (data) => {
     const { name, path } = data
@@ -23,7 +23,7 @@ module.exports = {
       name,
       dtime: `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
       upperFirstName,
-      upperFirstPath,
+      upperFirstPath
     }
     const actions = []
     if (name) {
@@ -33,24 +33,24 @@ module.exports = {
           path: `./src/components/${upperFirstPath}/src/${upperFirstName}.vue`,
           templateFile: './plop/component/component.hbs',
           data: templateData,
-          skipIfExists: true,
+          skipIfExists: true
         },
         {
           type: 'add',
           path: `./src/components/${upperFirstPath}/index.ts`,
           templateFile: './plop/component/index.hbs',
           data: templateData,
-          skipIfExists: true,
+          skipIfExists: true
         },
         {
           type: 'append',
           path: `./src/components/${upperFirstPath}/index.ts`,
           templateFile: './plop/component/append.hbs',
-          data: templateData,
+          data: templateData
         }
       )
     }
 
     return actions
-  },
+  }
 }

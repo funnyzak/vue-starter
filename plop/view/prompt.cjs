@@ -7,13 +7,13 @@ module.exports = {
       type: 'input',
       name: 'path',
       message: '请输入路径（Please enter a path）',
-      default: 'views',
+      default: 'views'
     },
     {
       type: 'input',
       name: 'name',
-      message: '请输入模块名称（Please enter module name）',
-    },
+      message: '请输入模块名称（Please enter module name）'
+    }
   ],
   actions: (data) => {
     const { name, path } = data
@@ -21,7 +21,7 @@ module.exports = {
     const templateData = {
       name,
       dtime: `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
-      upperFirstName,
+      upperFirstName
     }
     const actions = []
     if (name) {
@@ -30,10 +30,10 @@ module.exports = {
         path: `./src/${path}/${upperFirstName}.vue`,
         templateFile: './plop/view/view.hbs',
         data: templateData,
-        skipIfExists: true,
+        skipIfExists: true
       })
     }
 
     return actions
-  },
+  }
 }

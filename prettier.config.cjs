@@ -22,4 +22,4 @@ module.exports = {
   htmlWhitespaceSensitivity: 'strict', //对HTML全局空白不敏感
   endOfLine: 'auto',
   rangeStart: 0
-};
+}
