@@ -775,10 +775,10 @@
     "@volar/typescript" "1.0.9"
     "@volar/vue-language-core" "1.0.9"
 
-"@vue-macros/common@~0.12.3":
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-0.12.3.tgz#07eaf69df90b52dba1cccb00eaa1e124cc684a28"
-  integrity sha512-APF/V0WaUwdED+x1BfEoak0GeFXa/mDffQLl4A6WRfHRoJYv+tfJ86CDVqV0KgNhTemEXpMxvR1vY/pARmy3Ow==
+"@vue-macros/common@~0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-0.13.0.tgz#1d7bd7a706144ee86e189d626065d78eff46aaa8"
+  integrity sha512-maWU77Tvp8qSZa+aXNcRGwVAS4lFJdxXPxC7FuXviNviHOIhZ/cAxKXYJl5xrLY7omT/b+4USpsFStjI03NRnQ==
   dependencies:
     "@babel/types" "^7.19.4"
     "@vue/compiler-sfc" "^3.2.41"
@@ -5063,20 +5063,20 @@ unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==
 
-unplugin-vue-define-options@0.12.3:
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.12.3.tgz#65d871ff0a9ca072f084fa5e193a8def2134fff5"
-  integrity sha512-Jo4XFyW8so2BnVxMKa1hcarnMErp9vOueOrHLUHxf3ixZ98aHsatrg9uYGw3Ax9u4IqheIRslU2upvpTp9yunQ==
+unplugin-vue-define-options@0.12.4:
+  version "0.12.4"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.12.4.tgz#6740580b873e26afa917f769ece0898c211b8d8d"
+  integrity sha512-gb4Ye3T1d6WlGy1PFNbqnhgtoNuZWW28F/xhZpksZcLpRuEis3/Q27uR1q9nW0vNh2ceqTo//xFcwjzu72pGxw==
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
-    "@vue-macros/common" "~0.12.3"
+    "@vue-macros/common" "~0.13.0"
     ast-walker-scope "^0.2.3"
-    unplugin "^0.9.6"
+    unplugin "^0.10.2"
 
-unplugin@^0.9.6:
-  version "0.9.6"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.9.6.tgz#f449173b619b9970bf3190d5419a66a727bb5d18"
-  integrity sha512-YYLtfoNiie/lxswy1GOsKXgnLJTE27la/PeCGznSItk+8METYZErO+zzV9KQ/hXhPwzIJsfJ4s0m1Rl7ZCWZ4Q==
+unplugin@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.10.2.tgz#0f7089c3666f592cc448d746e39e7f41e9afb01a"
+  integrity sha512-6rk7GUa4ICYjae5PrAllvcDeuT8pA9+j5J5EkxbMFaV+SalHhxZ7X2dohMzu6C3XzsMT+6jwR/+pwPNR3uK9MA==
   dependencies:
     acorn "^8.8.0"
     chokidar "^3.5.3"
