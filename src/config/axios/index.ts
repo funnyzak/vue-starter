@@ -75,7 +75,7 @@ service.interceptors.response.use(
     const { data } = response
     if (!data) {
       // HTTP请求没有返回值;
-      throw new Error()
+      return Promise.reject(new Error('HTTP request failed!'))
     }
     // 未设置状态码则默认成功状态
     const code = data.code || result_code
@@ -97,6 +97,7 @@ service.interceptors.response.use(
         // 2. 进行刷新访问令牌
         // TODO: 刷新访问令牌
       }
+      return Promise.reject(msg)
     } else if (code === 500) {
       return Promise.reject(new Error(msg))
     } else if (code !== 200) {
@@ -107,7 +108,7 @@ service.interceptors.response.use(
       }
       return Promise.reject(msg)
     } else {
-      return data
+      return Promise.resolve({ ...response })
     }
   },
   (error: AxiosError) => {
