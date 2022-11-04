@@ -34,7 +34,7 @@ const errorMap: {
 }
 
 const props = defineProps({
-  type: propTypes.string.validate((_v: string) => ['404', '500', '403'].includes(_v)).def('404')
+  type: propTypes.string.validate((_v: any) => ['404', '500', '403'].indexOf(_v)>=0).def('404')
 })
 
 const emit = defineEmits(['errorClick'])
