@@ -79,17 +79,17 @@
     browserslist "^4.21.3"
     semver "^6.3.0"
 
-"@babel/helper-create-class-features-plugin@^7.19.0":
-  version "7.19.0"
-  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.19.0.tgz#bfd6904620df4e46470bae4850d66be1054c404b"
-  integrity sha512-NRz8DwF4jT3UfrmUoZjd0Uph9HQnP30t7Ash+weACcyNkiYTywpIjDBgReJMKgr+n86sn2nPVVmJ28Dm053Kqw==
+"@babel/helper-create-class-features-plugin@^7.20.2":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.20.2.tgz#3c08a5b5417c7f07b5cf3dfb6dc79cbec682e8c2"
+  integrity sha512-k22GoYRAHPYr9I+Gvy2ZQlAe5mGy8BqWst2wRt8cwIufWTxrsVshhIBvYNqC80N0GSFWTsqRVexOtfzlgOEDvA==
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.18.6"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-member-expression-to-functions" "^7.18.9"
     "@babel/helper-optimise-call-expression" "^7.18.6"
-    "@babel/helper-replace-supers" "^7.18.9"
+    "@babel/helper-replace-supers" "^7.19.1"
     "@babel/helper-split-export-declaration" "^7.18.6"
 
 "@babel/helper-environment-visitor@^7.18.9":
@@ -152,7 +152,12 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.19.0.tgz#4796bb14961521f0f8715990bee2fb6e51ce21bf"
   integrity sha512-40Ryx7I8mT+0gaNxm8JGTZFUITNqdLAgdg0hXzeVZxVD6nFsdhQvip6v8dqkRHzsz1VFpFAaOCHNn0vKBL7Czw==
 
-"@babel/helper-replace-supers@^7.18.9":
+"@babel/helper-plugin-utils@^7.20.2":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.20.2.tgz#d1b9000752b18d0877cff85a5c376ce5c3121629"
+  integrity sha512-8RvlJG2mj4huQ4pZ+rU9lqKi9ZKiRmuvGuM2HlWmkmgOhbs6zEAw6IEiJ5cQqGbDzGZOhwuOQNtZMi/ENLjZoQ==
+
+"@babel/helper-replace-supers@^7.19.1":
   version "7.19.1"
   resolved "https://registry.yarnpkg.com/@babel/helper-replace-supers/-/helper-replace-supers-7.19.1.tgz#e1592a9b4b368aa6bdb8784a711e0bcbf0612b78"
   integrity sha512-T7ahH7wV0Hfs46SFh5Jz3s0B6+o8g3c+7TMxu7xKfmHikg7EAZ3I2Qk9LFhjxXq8sL7UkP5JflezNwoZa8WvWw==
@@ -227,21 +232,21 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/plugin-syntax-typescript@^7.18.6":
-  version "7.18.6"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.18.6.tgz#1c09cd25795c7c2b8a4ba9ae49394576d4133285"
-  integrity sha512-mAWAuq4rvOepWCBid55JuRNvpTNf2UGVgoz4JV0fXEKolsVZDzsa4NqCef758WZJj/GDu0gVGItjKFiClTAmZA==
+"@babel/plugin-syntax-typescript@^7.20.0":
+  version "7.20.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.20.0.tgz#4e9a0cfc769c85689b77a2e642d24e9f697fc8c7"
+  integrity sha512-rd9TkG+u1CExzS4SM1BlMEhMXwFLKVjOAFFCDx9PbX5ycJWDoWMcwdJH9RhkPu1dOgn5TrxLot/Gx6lWFuAUNQ==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.6"
-
-"@babel/plugin-transform-typescript@^7.19.3":
-  version "7.19.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.19.3.tgz#4f1db1e0fe278b42ddbc19ec2f6cd2f8262e35d6"
-  integrity sha512-z6fnuK9ve9u/0X0rRvI9MY0xg+DOUaABDYOe+/SQTxtlptaBB/V9JIUxJn6xp3lMBeb9qe8xSFmHU35oZDXD+w==
-  dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.19.0"
     "@babel/helper-plugin-utils" "^7.19.0"
-    "@babel/plugin-syntax-typescript" "^7.18.6"
+
+"@babel/plugin-transform-typescript@^7.20.0":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.20.2.tgz#91515527b376fc122ba83b13d70b01af8fe98f3f"
+  integrity sha512-jvS+ngBfrnTUBfOQq8NfGnSbF9BrqlR6hjJ2yVxMkmO5nL/cdifNbI30EfjRlN4g5wYWNnMPyj5Sa6R1pbLeag==
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.20.2"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/plugin-syntax-typescript" "^7.20.0"
 
 "@babel/standalone@^7.19.6":
   version "7.19.6"
@@ -716,13 +721,13 @@
     regenerator-runtime "^0.13.10"
     systemjs "^6.13.0"
 
-"@vitejs/plugin-vue-jsx@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue-jsx/-/plugin-vue-jsx-2.1.0.tgz#6bdea38ed97e72d98032d3d71491e315a0be37d2"
-  integrity sha512-vvL8MHKN0hUf5LE+/rCk1rduwzW6NihD6xEfM4s1gGCSWQFYd5zLdxBs++z3S7AV/ynr7Yig5Xp1Bm0wlB4IAA==
+"@vitejs/plugin-vue-jsx@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue-jsx/-/plugin-vue-jsx-2.1.1.tgz#7c13aa4e54f5ee8c9f37937b3d8c706c14369478"
+  integrity sha512-JgDhxstQlwnHBvZ1BSnU5mbmyQ14/t5JhREc6YH5kWyu2QdAAOsLF6xgHoIWarj8tddaiwFrNzLbWJPudpXKYA==
   dependencies:
     "@babel/core" "^7.19.6"
-    "@babel/plugin-transform-typescript" "^7.19.3"
+    "@babel/plugin-transform-typescript" "^7.20.0"
     "@vue/babel-plugin-jsx" "^1.1.1"
 
 "@vitejs/plugin-vue@3.2.0":
