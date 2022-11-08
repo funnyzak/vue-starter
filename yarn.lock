@@ -583,12 +583,7 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.186.tgz#862e5514dd7bd66ada6c70ee5fce844b06c8ee97"
   integrity sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==
 
-"@types/node@*":
-  version "18.11.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.8.tgz#16d222a58d4363a2a359656dd20b28414de5d265"
-  integrity sha512-uGwPWlE0Hj972KkHtCDVwZ8O39GmyjfMane1Z3GUBGGnkZ2USDq7SxLpVIiIHpweY9DS0QTDH0Nw7RNBsAAZ5A==
-
-"@types/node@18.11.9":
+"@types/node@*", "@types/node@18.11.9":
   version "18.11.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
   integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
@@ -972,6 +967,11 @@ acorn-jsx@^5.2.0, acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
+
+acorn-walk@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.2.0.tgz#741210f2e2426454508853a2f44d0ab83b7f69c1"
+  integrity sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==
 
 acorn@^7.1.1, acorn@^7.4.1:
   version "7.4.1"
@@ -5226,22 +5226,10 @@ vite-plugin-windicss@1.8.8:
     kolorist "^1.5.1"
     windicss "^3.5.6"
 
-vite@3.2.3:
+vite@3.2.3, vite@^3.0.0:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.2.3.tgz#7a68d9ef73eff7ee6dc0718ad3507adfc86944a7"
   integrity sha512-h8jl1TZ76eGs3o2dIBSsvXDLb1m/Ec1iej8ZMdz+PsaFUsftZeWe2CZOI3qogEsMNaywc17gu0q6cQDzh/weCQ==
-  dependencies:
-    esbuild "^0.15.9"
-    postcss "^8.4.18"
-    resolve "^1.22.1"
-    rollup "^2.79.1"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.2.0.tgz#a4015914620ff0122ea57fddfecc0e250eb6582c"
-  integrity sha512-Ovj7+cqIdM1I0LPCk2CWxzgADXMix3NLXpUT6g7P7zg/a9grk/TaC3qn9YMg7w7M0POIVCBOp1aBANJW+RH7oA==
   dependencies:
     esbuild "^0.15.9"
     postcss "^8.4.18"
@@ -5261,6 +5249,26 @@ vitest@0.24.5:
     chai "^4.3.6"
     debug "^4.3.4"
     local-pkg "^0.4.2"
+    strip-literal "^0.4.2"
+    tinybench "^2.3.1"
+    tinypool "^0.3.0"
+    tinyspy "^1.0.2"
+    vite "^3.0.0"
+
+vitest@0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.25.0.tgz#08750e869523265bff4dcb3c896c42f2ec6bd572"
+  integrity sha512-CVgBdKSeA27mowKC/C31Tx7ZBjRoyasq/yW7zoqUaCdKaOsjdzRUH5KgSL3eG36DzaaUsbnwWPUbAOtFz5k6tQ==
+  dependencies:
+    "@types/chai" "^4.3.3"
+    "@types/chai-subset" "^1.3.3"
+    "@types/node" "*"
+    acorn "^8.8.0"
+    acorn-walk "^8.2.0"
+    chai "^4.3.6"
+    debug "^4.3.4"
+    local-pkg "^0.4.2"
+    source-map "^0.6.1"
     strip-literal "^0.4.2"
     tinybench "^2.3.1"
     tinypool "^0.3.0"
