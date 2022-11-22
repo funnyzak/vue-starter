@@ -5405,10 +5405,10 @@ vue-tsc@1.0.9:
     "@volar/vue-language-core" "1.0.9"
     "@volar/vue-typescript" "1.0.9"
 
-vue-types@4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/vue-types/-/vue-types-4.2.1.tgz#f8f7e5fb42d4a6acda6d92c9736b510e5534c753"
-  integrity sha512-DNQZmJuOvovLUIp0BENRkdnZHbI0V4e2mNvjAZOAXKD56YGvRchtUYOXA/XqTxdv7Ng5SJLZqRKRpAhm5NLaPQ==
+vue-types@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/vue-types/-/vue-types-5.0.0.tgz#2c75082f72aecdb08e16c1327803960dfb12cd26"
+  integrity sha512-giq56UtZRugrJXAO71croWBrYlhBrtvRZPqBqcng3yq4D4NwmwZdTeJu/x76aoUAAghJ24CvALoVt1sc23IaFw==
   dependencies:
     is-plain-object "5.0.0"
 
