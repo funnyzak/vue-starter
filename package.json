@@ -120,9 +120,7 @@
       "prettier --write"
     ]
   },
-  "engines": {
-    "node": ">= 16"
-  },
+  "engines": {},
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/funnyzak/vue-starter/issues"
