@@ -78,7 +78,7 @@
     "@typescript-eslint/parser": "5.46.0",
     "@vitejs/plugin-legacy": "2.3.1",
     "@vitejs/plugin-vue": "3.2.0",
-    "@vitejs/plugin-vue-jsx": "2.1.1",
+    "@vitejs/plugin-vue-jsx": "3.0.0",
     "@vitest/coverage-c8": "0.25.6",
     "@vitest/ui": "0.25.6",
     "c8": "7.12.0",
