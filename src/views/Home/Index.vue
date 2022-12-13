@@ -36,7 +36,7 @@ const userInfo = computed(() => userStore.getUserInfo)
         :style="{
           color: localeStore.getCurrentLocale.lang === localMap.lang ? 'blue' : 'black'
         }"
-        class="pr-2"
+        class="pr-2 cursor-pointer"
         @click="
           () => {
             changeLocale(localMap.lang)

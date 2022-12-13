@@ -2,7 +2,7 @@
 
 [![action][ci-image]][ci-url] [![Release Date][rle-image]][rle-url] [![GitHub last commit][last-commit-image]][repository-url] [![tag][tag-image]][rle-url] [![license][license-image]][repository-url]
 
-基于 ` Vue 3 + TypeScript + Vite` ，及众多开源整合，构建 `Vue` 开发脚手架。帮助你进行 `Vue` 项目开发。使用 `Vitest` 进行单元测试。
+基于 ` Vue3 + TypeScript + Vite` ，及众多开源整合，构建 `Vue` 开发脚手架。帮助你进行 `Vue` 项目开发。使用 `Vitest` 进行单元测试。
 
 [在线预览](https://vuestarter2.vercel.app/)
 
