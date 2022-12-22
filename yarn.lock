@@ -838,11 +838,13 @@
     c8 "^7.12.0"
     vitest "0.25.8"
 
-"@vitest/ui@0.25.8":
-  version "0.25.8"
-  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-0.25.8.tgz#c97f25cd5ca8e9c0294326657420c9a047540297"
-  integrity sha512-wfuhghldD5QHLYpS46GK8Ru8P3XcMrWvFjRQD21KNzc9Y/qtJsqoC8KmT6xWVkMNw4oHYixpo3a4ZySRJdserw==
+"@vitest/ui@0.26.2":
+  version "0.26.2"
+  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-0.26.2.tgz#9ae81bb760b2614ecf38047a3c536a3452bd9f7d"
+  integrity sha512-DMQhooGJVWjkiKIWJqbprDynDbw/anG2An5PxyDqLuzpGX0MWnDLNxON8wneDtDIX3kCptzRWTVMAxaV/S8EoQ==
   dependencies:
+    fast-glob "^3.2.12"
+    flatted "^3.2.7"
     sirv "^2.0.2"
 
 "@volar/language-core@1.0.16":
@@ -2661,7 +2663,7 @@ flat-cache@^3.0.4:
     flatted "^3.1.0"
     rimraf "^3.0.2"
 
-flatted@^3.1.0:
+flatted@^3.1.0, flatted@^3.2.7:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
