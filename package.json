@@ -107,7 +107,7 @@
     "vite-plugin-windicss": "1.8.10",
     "vitest": "0.26.2",
     "vue-eslint-parser": "9.1.0",
-    "vue-tsc": "1.0.17",
+    "vue-tsc": "1.0.18",
     "windicss": "3.5.6",
     "windicss-analysis": "0.3.5"
   },
