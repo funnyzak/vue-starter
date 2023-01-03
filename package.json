@@ -71,7 +71,7 @@
     "@intlify/vite-plugin-vue-i18n": "7.0.0",
     "@types/intro.js": "5.1.0",
     "@types/lodash-es": "4.17.6",
-    "@types/node": "18.11.17",
+    "@types/node": "18.11.18",
     "@types/nprogress": "0.2.0",
     "@types/qs": "6.9.7",
     "@typescript-eslint/eslint-plugin": "5.47.0",
