@@ -2286,10 +2286,10 @@ eslint-config-prettier@8.6.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.6.0.tgz#dec1d29ab728f4fa63061774e1672ac4e363d207"
   integrity sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==
 
-eslint-define-config@1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-define-config/-/eslint-define-config-1.13.0.tgz#8d1c52ad5cefdb5b20bf612d35eeefe6e73ba381"
-  integrity sha512-d0BfmPGBcMusfiz6QY/piAhWaEyJriJtvk9SHfuJzI7am9k4ce07SfmPkpcR0ckXNyu4FBons10akOO2Tx+X+Q==
+eslint-define-config@1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/eslint-define-config/-/eslint-define-config-1.14.0.tgz#a9ce2861e88c7f1b6bc73a8f38ed8225ab296d13"
+  integrity sha512-NREt5SzMwKmLAY28YdaqIiTSJxfPpuZ+1ZLJxY2Wbj02dYF4QX81z0q9MPMjZB8C+SlCu66qAhcPpFJyhXOiuA==
 
 eslint-plugin-prettier@4.2.1:
   version "4.2.1"
