@@ -82,7 +82,7 @@
     "@vitest/coverage-c8": "0.26.3",
     "@vitest/ui": "0.26.2",
     "c8": "7.12.0",
-    "eslint": "8.31.0",
+    "eslint": "8.45.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-define-config": "1.13.0",
     "eslint-plugin-prettier": "4.2.1",
